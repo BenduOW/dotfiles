@@ -6,5 +6,5 @@ sudo rm -r ~/dotfiles/st/.config/st/*.o
 
 sudo rm ~/dotfiles/dmenu/.config/dmenu/dmenu
 sudo rm ~/dotfiles/dwm/.config/dwm/dwm
-sudo rm ~/dotfiles/slstatus/.config/slstatus
-sudo rm ~/dotfiles/st/.config/st
+sudo rm ~/dotfiles/slstatus/.config/slstatus/slstatus
+sudo rm ~/dotfiles/st/.config/st/st
