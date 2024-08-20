@@ -15,8 +15,6 @@ alias neofetch='fastfetch'
 
 PS1='[\u@\h \W]\$ '
 
-eval "$(starship init bash)"
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/bendu/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -32,3 +30,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export LD_PRELOAD=/usr/lib64/libstdc++.so.6
+
+eval "$(starship init bash)"
