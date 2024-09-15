@@ -5,10 +5,19 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+if [ -f /usr/bin/fastfetch ]; then
+	fastfetch
+fi
+
 alias ls='ls --color=auto'
 alias ll='ls -la --color=auto'
 
 alias grep='grep --color=auto'
+
+alias shut='shutdown'
+
+export EDITOR=nvim
+alias vim='nvim'
 
 alias oneofetch='/usr/bin/neofetch'
 alias neofetch='fastfetch'
@@ -31,5 +40,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export LD_PRELOAD=/usr/lib64/libstdc++.so.6
+
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
 eval "$(starship init bash)"
