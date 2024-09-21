@@ -17,6 +17,7 @@ alias grep='grep --color=auto'
 alias shut='shutdown'
 
 export EDITOR=nvim
+export VISUAL=nvim
 alias vim='nvim'
 
 alias oneofetch='/usr/bin/neofetch'
