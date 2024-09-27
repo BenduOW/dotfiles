@@ -30,8 +30,10 @@ sleep 2
 
 sudo pacman -Sy xorg xorg-xinit base-devel github-cli firefox neovim fastfetch feh starship lxappearance wget zoxide okular flameshot stow trash-cli bat bash-completion fzf tree npm zathura texlive-binextra thunderbird --noconfirm
 
-stow
+sleep 1
 
+cd ~/dotfiles
+stow bash fastfetch kde kitty neofetch nvim picom tmux useful x
 sleep 1
 
 #cd $HOME/.config/dwm
