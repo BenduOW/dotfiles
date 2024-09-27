@@ -28,20 +28,20 @@ echo "yay has been successfully installed!"
 
 sleep 2
 
-sudo pacman -Sy xorg xorg-xinit base-devel github-cli firefox neovim fastfetch feh starship lxappearance wget zoxide okular flameshot stow trash-cli bat bash-completion fzf tree npm zathura texlive-binextra --no-confirmation --needed
+sudo pacman -Sy xorg xorg-xinit base-devel github-cli firefox neovim fastfetch feh starship lxappearance wget zoxide okular flameshot stow trash-cli bat bash-completion fzf tree npm zathura texlive-binextra thunderbird --noconfirm
 
 stow
 
 sleep 1
 
-cd $HOME/.config/dwm
-sudo make clean install
-cd $HOME/.config/dmenu
-sudo make clean install
-cd $HOME/.config/slstatus
-sudo make clean install
-cd $HOME/.config/st
-sudo make clean install
+#cd $HOME/.config/dwm
+#sudo make clean install
+#cd $HOME/.config/dmenu
+#sudo make clean install
+#cd $HOME/.config/slstatus
+#sudo make clean install
+#cd $HOME/.config/st
+#sudo make clean install
 
 
 FONT_NAME="FiraCodeNerdFont"
