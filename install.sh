@@ -32,10 +32,6 @@ sudo pacman -Sy xorg xorg-xinit base-devel github-cli firefox neovim fastfetch f
 
 sleep 1
 
-cd ~/dotfiles
-stow bash fastfetch kde kitty neofetch nvim picom tmux useful x
-sleep 1
-
 #cd $HOME/.config/dwm
 #sudo make clean install
 #cd $HOME/.config/dmenu
@@ -45,20 +41,25 @@ sleep 1
 #cd $HOME/.config/st
 #sudo make clean install
 
+FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip"
+FONT_DIR="$HOME/.local/share/fonts"
 
-FONT_NAME="FiraCodeNerdFont"
-    if fc-list :family | grep -iq "$FONT_NAME"; then
-        printf "%b\n" "${GREEN}Font '$FONT_NAME' is installed.${RC}"
-    else
-        printf "%b\n" "${YELLOW}Installing font '$FONT_NAME'${RC}"
-        # Change this URL to correspond with the correct font
-        FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/latest/FiraCode.zip"
-        FONT_DIR="$HOME/.local/share/fonts"
-        TEMP_DIR=$(mktemp -d)
-        curl -sSLo "$TEMP_DIR"/"${FONT_NAME}".zip "$FONT_URL"
-        unzip "$TEMP_DIR"/"${FONT_NAME}".zip -d "$TEMP_DIR"
-        mkdir -p "$FONT_DIR"/"$FONT_NAME"
-        mv "${TEMP_DIR}"/*.ttf "$FONT_DIR"/"$FONT_NAME"
-        fc-cache -fv
-        rm -rf "${TEMP_DIR}"
-        
+# Create the font directory if it doesn't exist
+mkdir -p "$FONT_DIR"
+
+echo "Installing required packages..."
+sudo pacman -S --noconfirm curl unzip fontconfig
+
+echo "Downloading Fira Code Nerd Font..."
+curl -L -o "$HOME/FiraCode.zip" "$FONT_URL"
+
+echo "Extracting fonts..."
+unzip -o "$HOME/FiraCode.zip" -d "$FONT_DIR"
+
+echo "Updating font cache..."
+fc-cache -fv
+
+echo "Cleaning up..."
+rm "$HOME/FiraCode.zip"
+
+echo "Fira Code Nerd Font installation complete!"
