@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sudo pacman -Sy xorg xorg-xinit base-devel github-cli firefox neovim fastfetch feh starship lxappearance wget zoxide okular flameshot stow trash-cli bat bash-completion fzf tree npm zathura texlive-binextra thunderbird --noconfirm
+sudo pacman -Sy xorg xorg-xinit base-devel github-cli firefox neovim fastfetch feh starship lxappearance wget zoxide okular flameshot stow trash-cli bat bash-completion fzf tree npm zathura texlive-binextra thunderbird unzip fontconfig kitty archlinux-xdg-menu --noconfirm
 
 sleep 1
 
@@ -19,9 +19,6 @@ FONT_DIR="$HOME/.local/share/fonts"
 # Create the font directory if it doesn't exist
 mkdir -p "$FONT_DIR"
 
-echo "Installing required packages..."
-sudo pacman -S --noconfirm curl unzip fontconfig
-
 echo "Downloading Fira Code Nerd Font..."
 curl -L -o "$HOME/FiraCode.zip" "$FONT_URL"
 
@@ -33,5 +30,6 @@ fc-cache -fv
 
 echo "Cleaning up..."
 rm "$HOME/FiraCode.zip"
-
+rm "$HOME/.local/share/fonts/LICENSE"
+rm "$HOme/.local/share/fonts/README.md"
 echo "Fira Code Nerd Font installation complete!"
