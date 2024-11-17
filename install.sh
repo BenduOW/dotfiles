@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sudo pacman -Sy xorg xorg-xinit base-devel github-cli firefox neovim fastfetch feh starship lxappearance wget zoxide okular flameshot stow trash-cli bat bash-completion fzf tree npm zathura texlive-binextra thunderbird unzip fontconfig kitty archlinux-xdg-menu --noconfirm
+sudo pacman -Sy xorg xorg-xinit base-devel github-cli firefox neovim fastfetch feh starship lxappearance wget zoxide okular flameshot stow trash-cli bat bash-completion fzf tree npm zathura texlive-binextra thunderbird unzip fontconfig kitty archlinux-xdg-menu texlive-latex zathura-pdf-poppler wofi --noconfirm
 
 sleep 1
 
