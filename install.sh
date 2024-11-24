@@ -1,17 +1,45 @@
 #! /bin/bash
 
-sudo pacman -Sy xorg xorg-xinit base-devel github-cli firefox neovim fastfetch feh starship lxappearance wget zoxide okular flameshot stow trash-cli bat bash-completion fzf tree npm zathura texlive-binextra thunderbird unzip fontconfig kitty archlinux-xdg-menu texlive-latex zathura-pdf-poppler wofi --noconfirm
+installcom="pacman -Sy --noconfirm"
+
+install_programs() {
+    programs=$1
+    echo "Installing $programs..."
+    sudo $installcom $programs
+}
+
+echo "Select your preffered option:"
+echo "1. Install basic"
+echo "2. Install DWM + uni Stuff"
+echo "3. Install Hyprland + uni Stuff"
+echo "4. Exit"
+
+read -p "Enter choice (1-4): " choice
+
+case $choice in
+    1)
+        install_programs "$(< programs_basic.list)"
+        ;;
+    2)
+        install_programs "$(< programs_basic.list)"
+        install_programs "$(< programs_dwm.list)"
+        install_programs "$(< programs_uni.list)"
+        ;;
+    3)
+        install_programs "$(< programs_basic.list)"
+        install_programs "$(< programs_hyprland.list)"
+        install_programs "$(< programs_uni.list)"
+        ;;
+    4.)
+        echo "Exiting script."
+        exit 0
+        ;;
+    *)
+        echo "Invalid choice"
+esac
 
 sleep 1
 
-#cd $HOME/.config/dwm
-#sudo make clean install
-#cd $HOME/.config/dmenu
-#sudo make clean install
-#cd $HOME/.config/slstatus
-#sudo make clean install
-#cd $HOME/.config/st
-#sudo make clean install
 
 FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip"
 FONT_DIR="$HOME/.local/share/fonts"
