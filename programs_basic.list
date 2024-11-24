@@ -1,4 +1,5 @@
 base-devel
+curl
 github-cli
 neovim
 fastfetch
