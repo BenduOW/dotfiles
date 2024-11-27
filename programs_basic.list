@@ -19,4 +19,5 @@ unzip
 fontconfig
 archlinux-xdg-menu
 tree-sitter-cli
-zathura-pdf-poppler 
+zathura-pdf-poppler
+tealdeer

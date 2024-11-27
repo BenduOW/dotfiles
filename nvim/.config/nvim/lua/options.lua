@@ -28,7 +28,6 @@ local options = {
     number = true,                           -- set numbered lines
     relativenumber = false,                  -- set relative numbered lines
     numberwidth = 4,                         -- set number column width to 2 {default 4}
-  
     signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
     wrap = true,                             -- display lines as one long line
     linebreak = true,                        -- companion to wrap, don't split words
@@ -37,14 +36,11 @@ local options = {
     guifont = "monospace:h17",               -- the font used in graphical neovim applications
     whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
   }
-  
   for k, v in pairs(options) do
     vim.opt[k] = v
   end
-  
   -- vim.opt.shortmess = "ilmnrx"                        -- flags to shorten vim messages, see :help 'shortmess'
   vim.opt.shortmess:append "c"                           -- don't give |ins-completion-menu| messages
   vim.opt.iskeyword:append "-"                           -- hyphenated words recognized by searches
   vim.opt.formatoptions:remove({ "c", "r", "o" })        -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
   vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")  -- separate vim plugins from neovim in case vim still in use
-  

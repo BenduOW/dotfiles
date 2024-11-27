@@ -35,7 +35,7 @@ alias cat='bat'
 
 export EDITOR=nvim
 export VISUAL=nvim
-export MANPAGER='nvim +Man!'
+export MANPAGER='nvim +Man! -c "set number"'
 alias vim='nvim'
 
 alias oneofetch='/usr/bin/neofetch'
