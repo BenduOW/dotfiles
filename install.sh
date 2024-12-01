@@ -161,7 +161,7 @@ echo "Papirus is now set as icon theme."
 
 DOTFILES_DIR="$HOME/dotfiles"
 
-if [! -d "DOTFILES_DIR" ]; then
+if [! -d "$DOTFILES_DIR" ]; then
     echo "Dotfiles directory not found"
     exit 1
 fi
