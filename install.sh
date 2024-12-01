@@ -154,3 +154,28 @@ else
 fi
 
 echo "Papirus is now set as icon theme."
+
+
+
+#Automated "stowing" from dotfiles
+
+DOTFILES_DIR="$HOME/dotfiles"
+
+if [! -d "DOTFILES_DIR" ]; then
+    echo "Dotfiles directory not found"
+    exit 1
+fi
+
+echo "Stowing dotfiles..."
+
+for dir in "$DOTFILES_DIR"/*/; do
+    if [ ! -d "$dir" ]; then
+        continue
+    fi
+
+    folder_name=$(basename "$dir")
+    echo "Stowing $folder_name..."
+    stow -d "$DOTFILES_DIR" -t "$HOME" "$folder_name"
+done
+
+echo "All folders are stowed."
