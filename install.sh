@@ -1,4 +1,6 @@
-#! /bin/bash
+#! /bin/sh
+
+source DOTFILES_DIR="$HOME/dotfiles/scripts/*"
 
 #Function to detect pacakge manager
 detect_package_manager() {
@@ -169,12 +171,19 @@ fi
 
 echo "Stowing dotfiles..."
 
+stow -d "$DOTFILES_DIR" -t "$HOME" .vscode
+
 for dir in "$DOTFILES_DIR"/*/; do
     if [ ! -d "$dir" ]; then
         continue
     fi
 
     folder_name=$(basename "$dir")
+    if [ "$folder_name" == "useful" ] || [ "$folder_name" == "scripts"]; then
+        echo "Skipping folder $folder_name"
+        continue
+    fi
+
     echo "Stowing $folder_name..."
     stow -d "$DOTFILES_DIR" -t "$HOME" "$folder_name"
 done

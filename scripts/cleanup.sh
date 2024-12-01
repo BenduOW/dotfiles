@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 sudo rm -r ~/dotfiles/dmenu/.config/dmenu/*.o
 sudo rm -r ~/dotfiles/dwm/.config/dwm/*.o
 sudo rm -r ~/dotfiles/slstatus/.config/slstatus/*.o
