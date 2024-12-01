@@ -146,6 +146,7 @@ unzip -o "$HOME/papirus-icon-theme.zip" -d "$ICONS_DIR"
 echo "Cleaning up..."
 rm "$HOME/papirus-icon-theme-zip"
 echo "Papirus Icon Theme Installation complete"
+
 echo "Setting Papirus as the default icon theme..."
 if command -v lxappearance &> /dev/null; then
     lxappearance --set-icon-theme Papirus
@@ -155,13 +156,13 @@ fi
 
 echo "Papirus is now set as icon theme."
 
-
+mv .bashrc .bashrc.bak
 
 #Automated "stowing" from dotfiles
 
 DOTFILES_DIR="$HOME/dotfiles"
 
-if [! -d "$DOTFILES_DIR" ]; then
+if [ ! -d "$DOTFILES_DIR" ]; then
     echo "Dotfiles directory not found"
     exit 1
 fi
