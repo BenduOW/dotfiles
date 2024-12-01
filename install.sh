@@ -41,7 +41,7 @@ install_programs() {
 detect_package_manager
 
 echo "Select your preffered option:"
-echo "1. Install basic"
+echo "1. Install basic (DE)"
 echo "2. Install DWM + uni Stuff"
 echo "3. Install Hyprland + uni Stuff"
 echo "4. Exit"
@@ -70,11 +70,34 @@ case $choice in
         echo "Invalid choice"
 esac
 
-sleep 1
+echo "Do you want to install Discord using flatpak?"
+echo "1. Yes"
+echo "2. No"
+echo "3. Exit"
+
+read -p "Enter choice (1-3): " choice
+
+case $choice in 
+    1)
+        $installcom flatpak
+        flatpak install flathub com.discordapp.Discord -y
+        flatpak install flathub flatseal -y
+        ;;
+    2)
+        echo "Script continues now..."
+        ;;
+
+    3) 
+        echo "Exiting script."
+        exit 0
+        ;;
+    *)
+        echo "Invalid choice"
+
+esac
 
 $installcom unzip
 
-sleep 1
 
 #Install FiraCode nerd font and put it in folder
 FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip"
