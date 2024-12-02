@@ -181,7 +181,7 @@ for dir in "$DOTFILES_DIR"/*/; do
     fi
 
     folder_name=$(basename "$dir")
-    if [ "$folder_name" == "useful" ] || [ "$folder_name" == "scripts"]; then
+    if [ "$folder_name" == "useful" ] || [ "$folder_name" == "scripts" ]; then
         echo "Skipping folder $folder_name"
         continue
     fi
