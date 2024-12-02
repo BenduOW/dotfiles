@@ -7,20 +7,7 @@ if [ ! -d "$DOTFILES_DIR" ]; then
     exit 1
 fi
 
-#source DOTFILES_DIR="$HOME/dotfiles/scripts/*"
-
-if [ -d "$DOTFILES_DIR/scripts" ]; then
-    # Loop through all .sh files in the scripts folder and source them
-    for script in "$DOTFILES_DIR/scripts"/*.sh; do
-        if [ -f "$script" ]; then
-            echo "Sourcing script: $script"
-            source "$script"
-        fi
-    done
-else
-    echo "Scripts directory not found."
-    exit 1
-fi
+source $HOME/dotfiles/scripts/logging.sh
 
 #Function to detect pacakge manager
 detect_package_manager() {
@@ -69,7 +56,7 @@ echo "3. Install Hyprland"
 echo "4. Install Uni-Stuff"
 echo "5. Exit"
 
-read -p "Enter choice (1-4): " choice
+read -p "Enter choice (1-4) seperated by space: " choice
 for choice in $choices; do
     case $choice in
         1)
