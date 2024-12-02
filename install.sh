@@ -56,8 +56,8 @@ echo "3. Install Hyprland"
 echo "4. Install Uni-Stuff"
 echo "5. Exit"
 
-read -p "Enter choice (1-4) seperated by space: " choice
-for choice in $choices; do
+read -p "Enter choice (1-4) seperated by space: " -a choices
+for choice in "${choices[@]}"; do
     case $choice in
         1)
             install_programs "$(< programs_basic.list)"
