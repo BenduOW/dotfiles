@@ -155,7 +155,7 @@ echo "Extracting icon theme..."
 unzip -o "$HOME/papirus-icon-theme.zip" -d "$ICONS_DIR"
 
 echo "Cleaning up..."
-rm "$HOME/papirus-icon-theme-zip"
+rm "$HOME/papirus-icon-theme.zip"
 echo "Papirus Icon Theme Installation complete"
 
 echo "Setting Papirus as the default icon theme..."
