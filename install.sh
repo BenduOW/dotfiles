@@ -167,7 +167,7 @@ fi
 
 echo "Papirus is now set as icon theme."
 
-mv .bashrc .bashrc.bak
+mv $HOME/.bashrc $HOME/.bashrc.bak
 
 #Automated "stowing" from dotfiles
 
