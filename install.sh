@@ -137,36 +137,6 @@ rm "$HOME/.local/share/fonts/LICENSE"
 rm "$HOME/.local/share/fonts/README.md"
 echo "Fira Code Nerd Font installation complete!"
 
-#Install Papirus Theme
-ICONS_URL="https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/releases/latest/download/papirus-icon-theme.zip"
-ICONS_DIR="$HOME/.local/share/icons"
-
-mkdir -p "$ICONS_DIR"
-
-echo "Downloading Papirus Icon Theme..."
-curl -L -o "$HOME/papirus-icon-theme.zip" "$ICONS_URL"
-
-if [ ! -f "$HOME/papirus-icon-theme.zip" ]; then
-    echo "Error: Failed to download Papirus icon theme."
-    exit 1
-fi
-
-echo "Extracting icon theme..."
-unzip -o "$HOME/papirus-icon-theme.zip" -d "$ICONS_DIR"
-
-echo "Cleaning up..."
-rm "$HOME/papirus-icon-theme.zip"
-echo "Papirus Icon Theme Installation complete"
-
-echo "Setting Papirus as the default icon theme..."
-if command -v lxappearance &> /dev/null; then
-    lxappearance --set-icon-theme Papirus
-else 
-    echo "lxappearance not installed, pls fix manually."
-fi
-
-echo "Papirus is now set as icon theme."
-
 mv $HOME/.bashrc $HOME/.bashrc.bak
 
 #Automated "stowing" from dotfiles
@@ -191,3 +161,7 @@ for dir in "$DOTFILES_DIR"/*/; do
 done
 
 echo "All folders are stowed."
+
+source $HOME/.bashrc
+
+source $HOME/dotfiles/scripts/papirus.sh
