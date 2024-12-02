@@ -44,33 +44,35 @@ detect_package_manager
 
 echo "Select your preffered option:"
 echo "1. Install basic (DE)"
-echo "2. Install DWM + uni Stuff"
-echo "3. Install Hyprland + uni Stuff"
-echo "4. Exit"
+echo "2. Install DWM"
+echo "3. Install Hyprland"
+echo "4. Install Uni-Stuff"
+echo "5. Exit"
 
 read -p "Enter choice (1-4): " choice
-
-case $choice in
-    1)
-        install_programs "$(< programs_basic.list)"
-        ;;
-    2)
-        install_programs "$(< programs_basic.list)"
-        install_programs "$(< programs_dwm.list)"
-        install_programs "$(< programs_uni.list)"
-        ;;
-    3)
-        install_programs "$(< programs_basic.list)"
-        install_programs "$(< programs_hyprland.list)"
-        install_programs "$(< programs_uni.list)"
-        ;;
-    4)
-        echo "Exiting script."
-        exit 0
-        ;;
-    *)
-        echo "Invalid choice"
-esac
+for choice in $choices; do
+    case $choice in
+        1)
+            install_programs "$(< programs_basic.list)"
+            ;;
+        2)
+            install_programs "$(< programs_dwm.list)"
+            ;;
+        3)
+            install_programs "$(< programs_hyprland.list)"
+            ;;
+        4)
+            install_programs "$(< programs_uni.list)"
+            ;;
+        5)
+            echo "Exiting script."
+            exit 0
+            ;;
+        *)
+            echo "Invalid choice"
+            ;;
+    esac
+done
 
 echo "Do you want to install Discord using flatpak?"
 echo "1. Yes"
