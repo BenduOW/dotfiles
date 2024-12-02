@@ -1,6 +1,26 @@
 #! /bin/sh
 
-source DOTFILES_DIR="$HOME/dotfiles/scripts/*"
+DOTFILES_DIR="$HOME/dotfiles"
+
+if [ ! -d "$DOTFILES_DIR" ]; then
+    echo "Dotfiles directory not found"
+    exit 1
+fi
+
+#source DOTFILES_DIR="$HOME/dotfiles/scripts/*"
+
+if [ -d "$DOTFILES_DIR/scripts" ]; then
+    # Loop through all .sh files in the scripts folder and source them
+    for script in "$DOTFILES_DIR/scripts"/*.sh; do
+        if [ -f "$script" ]; then
+            echo "Sourcing script: $script"
+            source "$script"
+        fi
+    done
+else
+    echo "Scripts directory not found."
+    exit 1
+fi
 
 #Function to detect pacakge manager
 detect_package_manager() {
@@ -163,13 +183,6 @@ echo "Papirus is now set as icon theme."
 mv .bashrc .bashrc.bak
 
 #Automated "stowing" from dotfiles
-
-DOTFILES_DIR="$HOME/dotfiles"
-
-if [ ! -d "$DOTFILES_DIR" ]; then
-    echo "Dotfiles directory not found"
-    exit 1
-fi
 
 echo "Stowing dotfiles..."
 
