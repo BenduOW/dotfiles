@@ -29,9 +29,9 @@ detect_package_manager() {
         arch)
             installcom="sudo pacman -Sy --noconfirm"
             ;;
-        opensuse)
-            installcom="sudo zypper install -y"
-            ;;
+        #opensuse)
+        #    installcom="sudo zypper install -y"
+        #    ;;
         *)
             echo "Unsupported Distro: $DISTRO"
             exit 1
@@ -98,6 +98,7 @@ for choice in "${choices[@]}"; do
     esac
 done
 
-source $HOME/.bashrc
+cd $HOME
+source .bashrc
 echo "Script completed successfully!"
 
