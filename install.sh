@@ -56,29 +56,31 @@ echo "2. Install DWM"
 echo "3. Install Hyprland"
 echo "4. Install Uni-Stuff"
 echo "5. Skip program installation"
-read -p "Enter choice (1-5) seperated by space: " choice
+read -p "Enter choice (1-5) seperated by space: " -a choices
 
-case $choice in
-    1)
-        install_programs "$(< programs_basic.list)"
-        ;;
-    2)
-        install_programs "$(< programs_dwm.list)"
-        ;;
-    3)
-        install_programs "$(< programs_hyprland.list)"
-        ;;
-    4)
-        install_programs "$(< programs_uni.list)"
-        ;;
-    5)
-        echo "Skipping program installation..."
-        ;;
-    *)
-        echo "Invalid choice"
-        exit 1
-        ;;
-esac
+for choice in "${choices[@]}"; do
+    case $choice in
+        1)
+            install_programs "$(< programs_basic.list)"
+            ;;
+        2)
+            install_programs "$(< programs_dwm.list)"
+            ;;
+        3)
+            install_programs "$(< programs_hyprland.list)"
+            ;;
+        4)
+            install_programs "$(< programs_uni.list)"
+            ;;
+        5)
+            echo "Skipping program installation..."
+            ;;
+        *)
+            echo "Invalid choice"
+            exit 1
+            ;;
+    esac
+done
 
 #Discord Installation
 while true; do
