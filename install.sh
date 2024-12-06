@@ -84,10 +84,10 @@ for choice in "${choices[@]}"; do
             flatpak install flathub flatseal -y
             ;;
         6)
-            ./$HOME/dotfiles/scripts/install_fira_font.sh
+            source $HOME/dotfiles/scripts/install_fira_font.sh
             ;;
         7)
-            ./$HOME/dotfiles/scripts/stow_dotfiles.sh
+            source $HOME/dotfiles/scripts/stow_dotfiles.sh
             ;;
         8)
             echo "Skipping all tasks."
