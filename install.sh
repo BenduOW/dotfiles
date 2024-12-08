@@ -39,6 +39,26 @@ detect_package_manager() {
     esac
 }
 
+if lspci | grep -i nvidia; then
+    echo "NVIDIA GPU detected."
+    
+    echo "Would you like to install NVIDIA drivers and utilities? (yes/no)"
+    read answer
+    answer=$(echo "$answer" | tr '[:upper:]' '[:lower:]')
+
+    if [[ "$answer" == "yes" || "$answer" == "y" ]]; then
+        echo "Installing NVIDIA packages..."
+        $installcom nvidia nvidia-utils
+        echo "NVIDIA packages installed."
+    else
+        echo "You chose not to install the NVIDIA packages."
+    fi
+else
+    echo "No NVIDIA GPU detected."
+    echo "Proceeding with the rest of the script."
+fi
+
+echo "Script continues..."
 # Function to install programs from the list
 install_programs() {
     programs=$1
@@ -54,13 +74,12 @@ echo "Select the tasks you want to perform (separate choices with space):"
 echo "1. Install basic (DE)"
 echo "2. Install DWM"
 echo "3. Install Hyprland"
-echo "4. Install Uni-Stuff"
-echo "5. Install Discord via Flatpak"
-echo "6. Install FiraCode Nerd Font"
-echo "7. Stow dotfiles"
-echo "8. Skip all tasks"
+echo "4. Install Discord via Flatpak"
+echo "5. Install FiraCode Nerd Font"
+echo "6. Stow dotfiles"
+echo "7. Skip all tasks"
 
-read -p "Enter your choices (1-8): " -a choices
+read -p "Enter your choices (1-7): " -a choices
 
 # Install programs based on user selection
 for choice in "${choices[@]}"; do
@@ -75,21 +94,18 @@ for choice in "${choices[@]}"; do
             install_programs "$(< programs_hyprland.list)"
             ;;
         4)
-            install_programs "$(< programs_uni.list)"
-            ;;
-        5)
             echo "Installing Discord via Flatpak..."
             $installcom flatpak
             flatpak install flathub com.discordapp.Discord -y
             flatpak install flathub flatseal -y
             ;;
-        6)
+        5)
             source $HOME/dotfiles/scripts/install_fira_font.sh
             ;;
-        7)
+        6)
             source $HOME/dotfiles/scripts/stow_dotfiles.sh
             ;;
-        8)
+        7)
             echo "Skipping all tasks."
             ;;
         *)
