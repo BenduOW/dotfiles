@@ -114,7 +114,5 @@ for choice in "${choices[@]}"; do
     esac
 done
 
-cd $HOME
-source .bashrc
 echo "Script completed successfully!"
 
