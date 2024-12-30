@@ -29,3 +29,6 @@ lxappearance
 thunderbird
 texlive-latexextra
 texlive-langgerman
+nmap
+net-tools
+arp-scan

@@ -9,7 +9,7 @@ return {
         -- python:
         "black",
         "mypy",
-        "ruff",
+        --"ruff",
         "pyright",
         -- C:
         "clangd",
