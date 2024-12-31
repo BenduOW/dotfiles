@@ -77,9 +77,10 @@ echo "3. Install Hyprland"
 echo "4. Install Discord via Flatpak"
 echo "5. Install FiraCode Nerd Font"
 echo "6. Stow dotfiles"
-echo "7. Skip all tasks"
+echo "7. Install tmux plugins"
+echo "8. Skip all tasks"
 
-read -p "Enter your choices (1-7): " -a choices
+read -p "Enter your choices (1-8): " -a choices
 
 # Install programs based on user selection
 for choice in "${choices[@]}"; do
@@ -106,6 +107,9 @@ for choice in "${choices[@]}"; do
             source $HOME/dotfiles/scripts/stow_dotfiles.sh
             ;;
         7)
+            git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+            ;;
+        8)
             echo "Skipping all tasks."
             ;;
         *)
