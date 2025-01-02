@@ -1,5 +1,7 @@
 #! /bin/bash
 
+sudo pacman -Syu --noconfirm go
+
 # Define the installation directory
 INSTALL_DIR="$HOME/build"
 

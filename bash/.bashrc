@@ -27,11 +27,14 @@ alias ll='ls -la --color=auto'
 alias grep='grep --color=auto'
 
 alias shut='shutdown'
+alias suspend='systemctl suspend'
+
 
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='trash -v'
 alias cat='bat'
+alias ocat='/bin/cat'
 
 export EDITOR=nvim
 export VISUAL=nvim
