@@ -9,7 +9,7 @@ return {
         -- python:
         "black",
         "mypy",
-        --"ruff",
+        "ruff",
         "pyright",
         -- C:
         "clangd",
@@ -40,12 +40,25 @@ return {
       lspconfig.pyright.setup({
         on_attach = on_attach,
         capabilities = capabilities,
-        filetypes = {"python"},
+        settings = {
+          pyright = {
+            -- Using Ruff's import organizer
+            disableOrganizeImports = true,
+          },
+          python = {
+          analysis = {
+              -- Ignore all files for analysis exclusively use Ruff for linting
+              ignore = { "*" },
+            },
+          },
+        },
+        --filetypes = {"python"},
       })
+      lspconfig.ruff.setup({})
       lspconfig.clangd.setup({
         on_attach = on_attach,
         capabilities = capabilities,
-      })
+      }) 
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})

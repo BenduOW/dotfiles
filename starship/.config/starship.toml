@@ -9,7 +9,7 @@ add_newline = true
 #success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
 
 [character]
-disabled = false
+disabled = true 
 success_symbol = '[](bold fg:green)'
 error_symbol = '[](bold fg:red)'
 vimcmd_symbol = '[](bold fg:creen)'
@@ -26,7 +26,7 @@ symbol = '📦'
 format = '[$symbol$environment](dimmed green)'
 
 [os]
-disabled = false
+disabled = true 
 style = "bg:surface0 fg:text"
 
 [os.symbols]
