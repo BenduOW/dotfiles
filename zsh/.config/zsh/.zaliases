@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# settings for common commands
+alias ls="ls --color=auto"
+alias ll="ls -la --color=auto"
+alias grep='grep --color=auto'
+alias cp="cp -i"
+alias mv="mv -i"
+alias rm="trash -v"
+alias cat="bat"
+alias ocat="/bin/cat"
+alias tree="tree -CAhF --dirsfirst"
+alias treed="tree -CAFd"
+
+# folder navigation
+alias cdc="cd $XDG_CONFIG_HOME"
+alias cdcz="cd $XDG_CONFIG_HOME/zsh"
+alias cdd="cd $HOME/dotfiles"
+
+# application aliases
+alias vim="$EDITOR"
+alias oneofetch="/usr/bin/neofetch"
+alias neofetch="fastfetch"
+alias za="zathura"
+
+# change default user shell
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Log out and log back in for change to take effect.'"
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Log out and log back in for change to take effect.'"
+
+# system aliases
+alias shut="shutdown"
+alias suspend="systemctl suspend"
+

@@ -32,3 +32,6 @@ texlive-langgerman
 nmap
 net-tools
 arp-scan
+zsh
+sddm
+glow
