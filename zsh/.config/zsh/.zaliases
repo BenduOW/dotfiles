@@ -13,6 +13,9 @@ alias tree="tree -CAhF --dirsfirst"
 alias treed="tree -CAFd"
 
 # folder navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
 alias cdc="cd $XDG_CONFIG_HOME"
 alias cdcz="cd $XDG_CONFIG_HOME/zsh"
 alias cdd="cd $HOME/dotfiles"

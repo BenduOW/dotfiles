@@ -6,16 +6,20 @@ export BROWSER="firefox"
 
 # default folders
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
 
 #clean up home folder
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export _ZL_DATA="$XDG_CACHE_HOME/zsh/.zlua"
+export HISTFILE=$HOME/.config/zsh/.zsh_history
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 export LESSHISTFILE=-
-export HISTFILE=$HOME/.config/zsh/.zsh_history
+
 # colors!
 export BAT_THEME="Catppuccin Mocha"
-export MANPAGER="nvim +Man!"
+export MANPAGER="nvim +Man! -c 'set number'"
+#export MANPAGER=less
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
