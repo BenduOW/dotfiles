@@ -1,1 +1,70 @@
-https://archlinux.org/feeds/news/
+# (Linux)
+https://archlinux.org/feeds/news/ "(Linux)"
+https://distrowatch.com/news/news-headlines.xml "(Linux)"
+
+# (CySec)
+https://www.ccc.de/de/rss/updates.xml "(CySec)"
+https://www.kuketz-blog.de/feed/ "(CySec)"
+https://feeds.feedburner.com/TheHackersNews
+
+# (Blogs)
+https://blog.techlore.tech/feed/ "(Blog)"
+https://sideofburritos.com/blog/index.xml "(Blog)"
+
+# (Podcasts)
+https://feeds.yellowball.fm/UeJhwB "(Podcast)"
+https://feeds.acast.com/public/shows/65e15188b8456c00169f4864 "(Podcast)"
+
+# (mastodon)
+https://mastodon.social/@TheMorpheus.rss "(mastodon)"
+https://mastodon.social/@citizenlab.rss "(mastodon)"
+https://mastodon.social/@brodierobertson.rss "(mastodon)"
+https://fosstodon.org/@thelinuxcast.rss "(mastodon)"
+https://mas.to/@alexibexi.rss "(mastodon)"
+
+# (Tech-News)
+https://citizenlab.ca/category/lab-news/feed/ "(tech-news)"
+https://www.privacytools.io/guides/rss.xml "(tech-news)"
+https://hackread.com/category/hacking-news/leaks-affairs/feed/ "(tech-news)"
+https://feed.alternativeto.net/news/all/ "(tech-news)"
+http://www.heise.de/newsticker/heise.rdf "(tech-news)"
+
+# (News)
+http://feeds.bbci.co.uk/news/rss.xml "(news)"
+
+# (Gaming)
+https://de.ign.com/feed.xml?type=news "(gaming)"
+
+# (Lokales)
+https://www.volksverpetzer.de/feed/ "(Lokales)"
+https://www.tagesschau.de/investigativ/index~rss2.xml "(Lokales)"
+
+# (Reddit)
+https://www.reddit.com/r/linux.rss "~r/linux" "(Reddit)"
+https://www.reddit.com/r/unixporn.rss "~r/unixporn" "(Reddit)"
+https://www.reddit.com/r/me_irl.rss "~r/me_irl" "(Reddit)"
+https://www.reddit.com/r/ich_iel.rss "~r/ich_iel" "(Reddit)"
+https://www.reddit.com/r/ProgrammerHumor.rss "~r/ProgrammerHumor" "(Reddit)"
+
+# (YouTube)
+https://www.youtube.com/feeds/videos.xml?channel_id=UCg6gPGh8HU2U01vaFCAsvmQ "~ChrisTitusTech" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCZXW8E1__d5tZb-wLFOt8TQ "~Bog" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "~Brodie Robertson" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCHlUuVXyQvLQgjYAeVxEWKw "~Brodie Robertson Reacts" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCYeiozh-4QwuC1sjgCmB92w "~devopstoolbox" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~DistroTube" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCWQaM7SpSECp9FELz-cHzuQ "~Dreams of Code" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC1yGcBvdPGxRIMT1yo_bKIQ "~Jake@Linux" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "~Mental Outlaw" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCbDmEdLs-SB3FjrDFQJ4TDg "~Reysu" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCij1VEjDb88RCbqsvZ1gqaw "~Side Of Burritos" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCO2x-p9gg9TLKneXlibGR7w "~Snazzy Labs" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCtMVHI3AJD4Qk4hcbZnI9ZQ "~SomeOrdinaryGamers" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCjSEJkpGbcZhvo0lr-44X_w "~TechHut" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCs6KfncB4OV6Vug4o_bzijg "~Techlore" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCkZ3fSYruC0IXv6p34BHciQ "~The Morpheus" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ "~ThePrimeTime"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCo71RUe6DX4w-Vd47rFLXPg "~typecraft" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC_zBdZ0_H_jn41FDRG7q4Tw "~Vimjoyer" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC4Cqvm3LRHa2Fuv2m45sIEg "~VoxelRifts" "(YouTube)"

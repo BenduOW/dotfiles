@@ -1,6 +1,8 @@
 # default apps
 export EDITOR="nvim"
 export VISUAL="nvim"
+export SUDO_EDITOR="nvim"
+export READER="zathura"
 export TERMINAL="kitty"
 export BROWSER="firefox"
 
@@ -10,16 +12,17 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
 #clean up home folder
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export _ZL_DATA="$XDG_CACHE_HOME/zsh/.zlua"
-export HISTFILE=$HOME/.config/zsh/.zsh_history
-export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
-export LESSHISTFILE=-
+export ZDOTDIR="$HOME/.config/zsh"
+#export HISTFILE=$HOME/.config/zsh/.zsh_history
+#export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
+#export LESSHISTFILE=-
 
 # colors!
 export BAT_THEME="Catppuccin Mocha"
 export MANPAGER="nvim +Man! -c 'set number'"
-#export MANPAGER=less
+#export MANPAGER="less"
+#export BAT_PAGER="nvim +Man! -c 'set number'"
+export BAT_PAGER="less"
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \

@@ -1,22 +1,29 @@
 # source external files
 [[ -r ${ZDOTDIR:-$HOME}/.zaliases ]] && source ${ZDOTDIR:-$HOME}/.zaliases
 
-#if [ -f /usr/bin/fastfetch ]; then
- # fastfetch
-#fi
+# weird flex
+if [ -f /usr/bin/fastfetch ]; then
+  fastfetch
+fi
 
+# auto/tab complete
 autoload -Uz compinit
 setopt PROMPT_SUBST
 compinit
+_comp_options+=(globdots) # Include hidden files
 zstyle ':completion:*' menu select
 
+# ignore commands when beginning with a space
+setopt HIST_IGNORE_SPACE
+
+# plugin time
 source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
-
-
-
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.config/zsh/.zsh_history
 
 
 # !! Contents within this block are managed by 'conda init' !!

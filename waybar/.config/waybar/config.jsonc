@@ -1,38 +1,64 @@
 {
     "position": "top",
-    "modules-left": ["hyprland/workspaces", "custom/media"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["network", "pulseaudio", "battery", "clock"],
+    "modules-left": [
+        "hyprland/workspaces",
+    ],
+    "modules-center": [
+    "hyprland/window"
+    ],
+    "modules-right": [
+        "custom/media",
+        "network",
+        "cpu",
+        "memory",
+        "pulseaudio",
+        "battery",
+        "clock",
+    ],
+    // Module configuration
+    "hyprland/window": {
+        "max-length": 200,
+        "seperate-outputs": true
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}    {windows}",
+        "sort-by": "id",
+        "window-rewrite-default": "?",
+        "window-rewrite": {
+            "class<org.mozilla.firefox>": "",
+            "class<Chromium-browser>": "",
+            "class<pavucontrol>": "",
+            "class<kitty>": "",
+            "class<code>": "",
+            "class<steam>": "",
+            "class<discord>": "",
+            "class<dolphin>": "",
+            },
+    },
     "clock": {
       "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
-    "battery": {
-      "states": {
-        "warning": 30,
-        "critical": 15
-      },
-      "format": "<span size='13000' foreground='#a6e3a1'>{icon} </span> {capacity}%",
-      "format-warning": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {capacity}%",
-      "format-critical": "<span size='13000' foreground='#E38C8F'>{icon} </span> {capacity}%",
-      "format-charging": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-      "format-plugged": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-      "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {time}",
-      "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-      "format-icons": ["", "", "", "", ""],
-      "tooltip-format": "{time}"
-    },
     "network": {
-      //"format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
-      //"format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
-      //"format-linked": "{ifname} (No IP) ",
-      //"format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
-      //"tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
-      "format-ethernet": "{ipaddr}/{cidr} ",
-      "tooltip-format": "{ifname} via {gwaddr} ",
-      "format-linked": "{ifname} (No IP) ",
-      "format-disconnected": "Disconnected ⚠",
-      "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "interval": 2,
+        "format-ethernet": " {bandwidthDownBits} |  {bandwidthUpBits} ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "cpu": {
+        "format": "CPU {usage}% ",
+        "states": {
+            "warning": 80,
+            "critical": 90
+        }
+    },
+    "memory": {
+        "format": "RAM {used:0.1f} GB ",
+        "tooltip-format": "{used:0.1f}GB / {total:0.1f}GB",
+        "states": {
+            "warning": 80,
+            "critical": 90
+        }
     },
     "pulseaudio": {
         "format": "{icon}  {volume}%",
@@ -51,7 +77,8 @@
             "default": "🎜"
         },
         "escape": true,
-        //"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        //"exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources folder
         "exec": "$HOME/.config/waybar/scripts/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
+    },
   }
+}
