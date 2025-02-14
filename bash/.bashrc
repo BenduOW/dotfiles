@@ -36,6 +36,9 @@ alias rm='trash -v'
 alias cat='bat'
 alias ocat='/bin/cat'
 
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Log out and log back in for change to take effect.'"
+
+
 export EDITOR=nvim
 export VISUAL=nvim
 export MANPAGER='nvim +Man! -c "set number"'

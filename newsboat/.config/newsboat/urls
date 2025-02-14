@@ -18,7 +18,7 @@ https://feeds.acast.com/public/shows/65e15188b8456c00169f4864 "(Podcast)"
 # (mastodon)
 https://mastodon.social/@TheMorpheus.rss "(mastodon)"
 https://mastodon.social/@citizenlab.rss "(mastodon)"
-https://mastodon.social/@brodierobertson.rss "(mastodon)"
+https://linuxrocks.online/@BrodieOnLinux.rss "(mastodon)"
 https://fosstodon.org/@thelinuxcast.rss "(mastodon)"
 https://mas.to/@alexibexi.rss "(mastodon)"
 
@@ -30,7 +30,7 @@ https://feed.alternativeto.net/news/all/ "(tech-news)"
 http://www.heise.de/newsticker/heise.rdf "(tech-news)"
 
 # (News)
-http://feeds.bbci.co.uk/news/rss.xml "(news)"
+#http://feeds.bbci.co.uk/news/rss.xml "(news)"
 
 # (Gaming)
 https://de.ign.com/feed.xml?type=news "(gaming)"
@@ -40,11 +40,11 @@ https://www.volksverpetzer.de/feed/ "(Lokales)"
 https://www.tagesschau.de/investigativ/index~rss2.xml "(Lokales)"
 
 # (Reddit)
-https://www.reddit.com/r/linux.rss "~r/linux" "(Reddit)"
-https://www.reddit.com/r/unixporn.rss "~r/unixporn" "(Reddit)"
-https://www.reddit.com/r/me_irl.rss "~r/me_irl" "(Reddit)"
-https://www.reddit.com/r/ich_iel.rss "~r/ich_iel" "(Reddit)"
-https://www.reddit.com/r/ProgrammerHumor.rss "~r/ProgrammerHumor" "(Reddit)"
+#https://www.reddit.com/r/linux.rss "~r/linux" "(Reddit)"
+#https://www.reddit.com/r/unixporn.rss "~r/unixporn" "(Reddit)"
+#https://www.reddit.com/r/me_irl.rss "~r/me_irl" "(Reddit)"
+#https://www.reddit.com/r/ich_iel.rss "~r/ich_iel" "(Reddit)"
+#https://www.reddit.com/r/ProgrammerHumor.rss "~r/ProgrammerHumor" "(Reddit)"
 
 # (YouTube)
 https://www.youtube.com/feeds/videos.xml?channel_id=UCg6gPGh8HU2U01vaFCAsvmQ "~ChrisTitusTech" "(YouTube)"
