@@ -1,6 +1,6 @@
 include ~/.config/newsboat/dark
 prepopulate-query-feeds yes
-refresh-on-startup yes
+#refresh-on-startup yes
 #show-read-feeds no
 #auto-reload yes
 

@@ -33,4 +33,4 @@ alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Log out and log back in for ch
 # system aliases
 alias shut="shutdown"
 alias suspend="systemctl suspend"
-
+alias grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"

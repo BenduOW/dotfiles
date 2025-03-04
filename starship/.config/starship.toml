@@ -17,6 +17,12 @@ vimcmd_replace_one_symbol = '[](bold fg:purple)'
 vimcmd_replace_symbol = '[](bold fg:purple)'
 vimcmd_visual_symbol = '[](bold fg:lavender)'
 
+[directory.substitutions]
+"Downloads" = "  "
+"Pictures" = "  "
+"Documents" = "  "
+"Videos" = "  "
+
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true

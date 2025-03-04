@@ -1,12 +1,10 @@
-xrandr --output DP-2 --primary --output DP-1 --left-of DP-2
+xrandr --output DP-1 --primary --right-of DP-3
 
 #xmodmap -e "clear lock"
 #xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
 #xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 
 #xsetroot -cursor_name Vimix-cursor
-
-feh --bg-fill ~/Pictures/wallpaper1.jpg
 
 XDG_MENU_PREFIX=arch- kbuildsycoca6
 
@@ -16,7 +14,10 @@ picom &
 #slstatus &
 udiskie &
 syncthing --no-browser &
+flameshot &
+flatpak run com.discordapp.Discord &
 spotify &
+dunst &
 
 #exec dwm > ~/.dwm.log
 exec i3

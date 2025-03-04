@@ -5,7 +5,7 @@ https://distrowatch.com/news/news-headlines.xml "(Linux)"
 # (CySec)
 https://www.ccc.de/de/rss/updates.xml "(CySec)"
 https://www.kuketz-blog.de/feed/ "(CySec)"
-https://feeds.feedburner.com/TheHackersNews
+#https://feeds.feedburner.com/TheHackersNews "(CySec)"
 
 # (Blogs)
 https://blog.techlore.tech/feed/ "(Blog)"
@@ -16,35 +16,27 @@ https://feeds.yellowball.fm/UeJhwB "(Podcast)"
 https://feeds.acast.com/public/shows/65e15188b8456c00169f4864 "(Podcast)"
 
 # (mastodon)
-https://mastodon.social/@TheMorpheus.rss "(mastodon)"
-https://mastodon.social/@citizenlab.rss "(mastodon)"
-https://linuxrocks.online/@BrodieOnLinux.rss "(mastodon)"
-https://fosstodon.org/@thelinuxcast.rss "(mastodon)"
-https://mas.to/@alexibexi.rss "(mastodon)"
+https://mastodon.social/@TheMorpheus.rss "~TheMorpheus" "(mastodon)"
+https://mastodon.social/@citizenlab.rss "~citizenlab" "(mastodon)"
+https://linuxrocks.online/@BrodieOnLinux.rss "~BrodieOnLinux" "(mastodon)"
+https://fosstodon.org/@thelinuxcast.rss "~thelinuxcast" "(mastodon)"
+https://mas.to/@alexibexi.rss "~alexibexi" "(mastodon)"
 
 # (Tech-News)
 https://citizenlab.ca/category/lab-news/feed/ "(tech-news)"
 https://www.privacytools.io/guides/rss.xml "(tech-news)"
 https://hackread.com/category/hacking-news/leaks-affairs/feed/ "(tech-news)"
-https://feed.alternativeto.net/news/all/ "(tech-news)"
-http://www.heise.de/newsticker/heise.rdf "(tech-news)"
+#https://feed.alternativeto.net/news/all/ "(tech-news)"
+#http://www.heise.de/newsticker/heise.rdf "(tech-news)"
 
 # (News)
-#http://feeds.bbci.co.uk/news/rss.xml "(news)"
 
 # (Gaming)
-https://de.ign.com/feed.xml?type=news "(gaming)"
+#https://de.ign.com/feed.xml?type=news "(gaming)"
 
 # (Lokales)
 https://www.volksverpetzer.de/feed/ "(Lokales)"
 https://www.tagesschau.de/investigativ/index~rss2.xml "(Lokales)"
-
-# (Reddit)
-#https://www.reddit.com/r/linux.rss "~r/linux" "(Reddit)"
-#https://www.reddit.com/r/unixporn.rss "~r/unixporn" "(Reddit)"
-#https://www.reddit.com/r/me_irl.rss "~r/me_irl" "(Reddit)"
-#https://www.reddit.com/r/ich_iel.rss "~r/ich_iel" "(Reddit)"
-#https://www.reddit.com/r/ProgrammerHumor.rss "~r/ProgrammerHumor" "(Reddit)"
 
 # (YouTube)
 https://www.youtube.com/feeds/videos.xml?channel_id=UCg6gPGh8HU2U01vaFCAsvmQ "~ChrisTitusTech" "(YouTube)"

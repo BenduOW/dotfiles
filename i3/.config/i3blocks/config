@@ -21,16 +21,27 @@ separator_block_width=15
 #command=echo "Hello, $USER!"
 #interval=once
 
+[rss_news]
+command=$SCIRPT_DIR/rss_news
+label=<span color="#d65d0e"> </span>
+interval=once
+signal=6
+
 [mediaplayer]
 command=$SCRIPT_DIR/mediaplayer
 instance=spotify
 interval=5
 signal=10
 
-[cpu]
-command=$SCRIPT_DIR/cpu
-label= 
-interval=2
+[cpugraph]
+interval=1
+command=$SCRIPT_DIR/cpugraph
+min_width=⣾⣄ 100.00%
+
+#[cpu]
+#command=$SCRIPT_DIR/cpu
+#label= 
+#interval=2
 
 [memory]
 command=$SCRIPT_DIR/memory

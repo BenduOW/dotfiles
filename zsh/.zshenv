@@ -4,7 +4,7 @@ export VISUAL="nvim"
 export SUDO_EDITOR="nvim"
 export READER="zathura"
 export TERMINAL="kitty"
-export BROWSER="firefox"
+export BROWSER="brave"
 
 # default folders
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -18,6 +18,8 @@ export ZDOTDIR="$HOME/.config/zsh"
 #export LESSHISTFILE=-
 
 # colors!
+export GTK_THEME=Adwaita:dark
+export QT_STYLE_OVERRIDE=Adwaita-Dark
 export BAT_THEME="Catppuccin Mocha"
 export MANPAGER="nvim +Man! -c 'set number'"
 #export MANPAGER="less"
