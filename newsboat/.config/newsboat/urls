@@ -6,6 +6,7 @@ https://distrowatch.com/news/news-headlines.xml "(Linux)"
 https://www.ccc.de/de/rss/updates.xml "(CySec)"
 https://www.kuketz-blog.de/feed/ "(CySec)"
 #https://feeds.feedburner.com/TheHackersNews "(CySec)"
+https://arstechnica.com/security/feed/ "(CySec)"
 
 # (Blogs)
 https://blog.techlore.tech/feed/ "(Blog)"
@@ -43,7 +44,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCg6gPGh8HU2U01vaFCAsvmQ "~C
 https://www.youtube.com/feeds/videos.xml?channel_id=UCZXW8E1__d5tZb-wLFOt8TQ "~Bog" "(YouTube)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "~Brodie Robertson" "(YouTube)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCHlUuVXyQvLQgjYAeVxEWKw "~Brodie Robertson Reacts" "(YouTube)"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCYeiozh-4QwuC1sjgCmB92w "~devopstoolbox" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCYeiozh-4QwuC1sjgCmB92w "~DevOps Toolbox" "(YouTube)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~DistroTube" "(YouTube)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCWQaM7SpSECp9FELz-cHzuQ "~Dreams of Code" "(YouTube)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC1yGcBvdPGxRIMT1yo_bKIQ "~Jake@Linux" "(YouTube)"

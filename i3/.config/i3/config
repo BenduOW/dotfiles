@@ -42,6 +42,9 @@ exec --no-startup-id nm-applet
 # Wallpaper script
 exec --no-startup-id $HOME/dotfiles/scripts/wallpaper.sh
 
+# Start spotify and Discord on correct workspace
+exec --no-startup-id $HOME/dotfiles/scripts/load_layout.sh
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -154,11 +157,12 @@ workspace $ws6 output DP-1
 workspace $ws7 output DP-1
 workspace $ws8 output DP-1
 workspace $ws9 output DP-1
-workspace $ws0 output DP-1
+workspace $ws10 output DP-1
 
 assign [class="discord"] $ws1
 assign [class="Spotify"] $ws1
 assign [class="Brave-Browser"] $ws3
+assign [class="KeePassXC"] $ws9
 for_window [class="pavucontrol"] floating enable
 
 # switch to workspace

@@ -11,7 +11,7 @@ fi
 echo "Stowing dotfiles..."
 mv $HOME/.bashrc $HOME/.bashrc.bak
 
-stow -d "$DOTFILES_DIR" -t "$HOME" .vscode
+#stow -d "$DOTFILES_DIR" -t "$HOME" .vscode
 
 for dir in "$DOTFILES_DIR"/*/; do
     if [ ! -d "$dir" ]; then
@@ -19,7 +19,7 @@ for dir in "$DOTFILES_DIR"/*/; do
     fi
 
     folder_name=$(basename "$dir")
-    if [ "$folder_name" == "useful" ] || [ "$folder_name" == "scripts" ] || [ "$folder_name" == ".vscode" ]; then
+    if [ "$folder_name" == "useful" ] || [ "$folder_name" == "scripts" ] || [ "$folder_name" == ".vscode" ] || [ "$folder_name" == "icons" ] || [ "$folder_name" == "wallpapers" ] || [ "$folder_name" == ".mypy_cache" ]; then
         echo "Skipping folder $folder_name"
         continue
     fi

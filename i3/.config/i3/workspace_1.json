@@ -1,0 +1,59 @@
+// vim:ts=4:sw:et
+{
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+        "border": "pixel",
+        "current_border_width": 1,
+        "floating": "auto_off",
+        "geometry": {
+           "height": 1055,
+           "width": 1918,
+           "x": 1,
+           "y": 24
+        },
+        "marks": [],
+        "name": "Beach House - Lemon Glow",
+        "percent": 0.5,
+        "swallows": [
+           {
+           "class": "^Spotify$",
+           "instance": "^spotify$",
+           "machine": "^archlinux$",
+           "title": "^Beach\\ House\\ \\-\\ Lemon\\ Glow$",
+           "window_role": "^spotify$"
+           }
+        ],
+        "type": "con"
+    }
+
+    {
+        "border": "pixel",
+        "current_border_width": 1,
+        "floating": "auto_off",
+        "geometry": {
+           "height": 1055,
+           "width": 958,
+           "x": 960,
+           "y": 23
+        },
+        "marks": [],
+        "name": "Friends - Discord",
+        "percent": 0.5,
+        "swallows": [
+           {
+           "class": "^discord$",
+           "instance": "^discord$",
+           "machine": "^archlinux$",
+           "title": "^Friends\\ \\-\\ Discord$",
+           "window_role": "^browser\\-window$"
+           }
+        ],
+        "type": "con"
+    }
+    ]
+}
+
+

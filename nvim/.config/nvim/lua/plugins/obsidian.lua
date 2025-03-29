@@ -20,8 +20,8 @@ return {
   opts = {
     workspaces = {
       {
-        name = "resources",
-        path = "$HOME/resources",
+        name = "notes",
+        path = "$HOME/notes",
       },
     },
 

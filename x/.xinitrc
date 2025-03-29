@@ -8,15 +8,15 @@ xrandr --output DP-1 --primary --right-of DP-3
 
 XDG_MENU_PREFIX=arch- kbuildsycoca6
 
-xrdb ~/.config/X11/xresources
-
+xrdb -load ~/.config/X11/xresources &
+xsetroot -cursor_name Bibata-Modern-Ice
 picom &
 #slstatus &
 udiskie &
 syncthing --no-browser &
 flameshot &
-flatpak run com.discordapp.Discord &
-spotify &
+#flatpak run com.discordapp.Discord &
+#spotify &
 dunst &
 
 #exec dwm > ~/.dwm.log

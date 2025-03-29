@@ -73,12 +73,13 @@ detect_package_manager
 echo "Select the tasks you want to perform (separate choices with space):"
 echo "1. Install basic (DE)"
 echo "2. Install DWM"
-echo "3. Install Hyprland"
-echo "4. Install Discord via Flatpak"
-echo "5. Install FiraCode Nerd Font"
-echo "6. Stow dotfiles"
-echo "7. Install tmux plugins"
-echo "8. Skip all tasks"
+echo "3. Install i3"
+echo "4. Install Hyprland"
+echo "5. Install Discord via Flatpak"
+echo "6. Install FiraCode Nerd Font"
+echo "7. Stow dotfiles"
+echo "8. Install tmux plugins"
+echo "9. Skip all tasks"
 
 read -p "Enter your choices (1-8): " -a choices
 
@@ -92,24 +93,27 @@ for choice in "${choices[@]}"; do
             install_programs "$(< programs_dwm.list)"
             ;;
         3)
-            install_programs "$(< programs_hyprland.list)"
+            install_programs "$(< programs_i3.list)"
             ;;
         4)
+            install_programs "$(< programs_hyprland.list)"
+            ;;
+        5)
             echo "Installing Discord via Flatpak..."
             $installcom flatpak
             flatpak install flathub com.discordapp.Discord -y
             flatpak install flathub flatseal -y
             ;;
-        5)
+        6)
             source $HOME/dotfiles/scripts/install_fira_font.sh
             ;;
-        6)
+        7)
             source $HOME/dotfiles/scripts/stow_dotfiles.sh
             ;;
-        7)
+        8)
             git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
             ;;
-        8)
+        9)
             echo "Skipping all tasks."
             ;;
         *)
