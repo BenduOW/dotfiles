@@ -5,6 +5,10 @@ export SUDO_EDITOR="nvim"
 export READER="zathura"
 export TERMINAL="kitty"
 export BROWSER="brave"
+export WM="i3"
+export IMAGE="mupdf"
+export LAUNCHER="rofi"
+export DIFFPROG="nvim -d"
 
 # default folders
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -12,7 +16,9 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
 #clean up home folder
-export ZDOTDIR="$HOME/.config/zsh"
+export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
+export _Z_DATA="$XDG_DATA_HOME"/z
 #export HISTFILE=$HOME/.config/zsh/.zsh_history
 #export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 #export LESSHISTFILE=-

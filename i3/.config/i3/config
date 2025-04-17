@@ -17,7 +17,7 @@ default_floating_border pixel 1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-#font pango:monospace 8
+#font pango:monospace 8 
 font pango:Hack 11
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -40,7 +40,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Wallpaper script
-exec --no-startup-id $HOME/dotfiles/scripts/wallpaper.sh
+#exec --no-startup-id $HOME/dotfiles/scripts/wallpaper.sh
 
 # Start spotify and Discord on correct workspace
 exec --no-startup-id $HOME/dotfiles/scripts/load_layout.sh
@@ -70,8 +70,9 @@ bindsym $mod+q kill
 # start newsboat
 bindsym $mod+n exec kitty -e newsboat
 
-# start brave 
-bindsym $mod+b exec brave
+# start browser 
+bindsym $mod+w exec brave
+bindsym $mod+Shift+w exec firefox
 
 # Screenshot
 bindsym Print exec flameshot gui
@@ -86,10 +87,11 @@ bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 #bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+#bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -110,7 +112,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+g split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -120,7 +122,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -164,6 +166,7 @@ assign [class="Spotify"] $ws1
 assign [class="Brave-Browser"] $ws3
 assign [class="KeePassXC"] $ws9
 for_window [class="pavucontrol"] floating enable
+for_window [class="Tor Browser"] floating enable
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1

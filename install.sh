@@ -81,7 +81,7 @@ echo "7. Stow dotfiles"
 echo "8. Install tmux plugins"
 echo "9. Skip all tasks"
 
-read -p "Enter your choices (1-8): " -a choices
+read -p "Enter your choices (1-9): " -a choices
 
 # Install programs based on user selection
 for choice in "${choices[@]}"; do

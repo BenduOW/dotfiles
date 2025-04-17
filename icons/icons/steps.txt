@@ -1,0 +1,3 @@
+cp /usr/share/applications/firefox.desktop ~/.local/share/applications/
+replace Icon= line with path to custom icon
+update icon cache
