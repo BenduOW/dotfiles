@@ -1,3 +1,5 @@
+#[ -z "$DISPLAY" ] && export DISPLAY=:0
+export DESKTOP_SESSION=plasma
 xrandr --output DP-1 --primary --right-of DP-3
 
 #xmodmap -e "clear lock"
@@ -10,16 +12,14 @@ XDG_MENU_PREFIX=arch- kbuildsycoca6
 
 xrdb -load ~/.config/X11/xresources &
 xsetroot -cursor_name Bibata-Modern-Ice
-picom &
+#picom &
 #slstatus &
-sxhkd &
-udiskie &
-syncthing --no-browser &
-flameshot &
-redshift &
+#sxhkd &
+#udiskie &
+#syncthing --no-browser &
+#flameshot &
+#redshift &
 #flatpak run com.discordapp.Discord &
 #spotify &
-dunst &
-
-#exec dwm > ~/.dwm.log
-exec i3
+#dunst &
+exec startplasma-x11

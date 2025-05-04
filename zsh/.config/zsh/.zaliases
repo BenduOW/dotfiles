@@ -1,8 +1,12 @@
 #!/bin/sh
 
 # settings for common commands
-alias ls="ls --color=auto"
-alias ll="ls -la --color=auto"
+#alias ls="ls --color=auto"
+#alias ll="ls -la --color=auto"
+alias ls='eza --color=always --group-directories-first' # my preferred listing
+alias ll='eza -a --color=always --group-directories-first'  # all files and dirs
+alias la='eza -la --color=always --group-directories-first'  # long format
+alias lt='eza -aT --color=always --group-directories-first' # tree listing
 alias grep='grep --color=auto'
 alias cp="cp -i"
 alias mv="mv -i"
@@ -22,6 +26,7 @@ alias cdd="cd $HOME/dotfiles"
 
 # application aliases
 alias vim="$EDITOR"
+alias nvim-test="XDG_CONFIG_HOME=~/projects/archinstall_build/nvim-build init.lua"
 alias oneofetch="/usr/bin/neofetch"
 alias neofetch="fastfetch"
 alias za="zathura"
@@ -34,3 +39,4 @@ alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Log out and log back in for ch
 alias shut="shutdown"
 alias suspend="systemctl suspend"
 alias grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias update="yay -Syu;tldr --update;flatpak update"

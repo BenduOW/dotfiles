@@ -21,5 +21,5 @@ done
 while true; do 
     WALLPAPER=$(find $FOLDERS -type f \( ! -name '*.zip' ! -name '*.txt' \) | shuf -n 1)
     feh --bg-fill "$WALLPAPER" --bg-fill "$WALLPAPER"
-    sleep 120
+    sleep 300
 done

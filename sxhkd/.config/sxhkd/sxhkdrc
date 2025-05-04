@@ -1,0 +1,34 @@
+# Play/Pause media
+XF86AudioPlay
+    playerctl --player=spotify play-pause
+
+# Next track
+XF86AudioNext
+    playerctl --player=spotify next
+
+# Previous track
+XF86AudioPrev
+    playerctl --player=spotify previous
+
+XF86AudioRaiseVolume
+    pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Spotify specific
+# Spotify volume up
+super + XF86AudioRaiseVolume
+    pactl set-sink-input-volume $(pactl list sink-inputs | grep -B20 'application.name = "spotify"' | grep 'Sink Input' | sed 's/[^0-9]*\([0-9]*\).*/\1/') +5%
+
+# Spotify volume down
+super + XF86AudioLowerVolume
+    pactl set-sink-input-volume $(pactl list sink-inputs | grep -B20 'application.name = "spotify"' | grep 'Sink Input' | sed 's/[^0-9]*\([0-9]*\).*/\1/') -5%
+
+# Spotify mute toggle
+super + XF86AudioMute
+    pactl set-sink-input-mute $(pactl list sink-inputs | grep -B20 'application.name = "spotify"' | grep 'Sink Input' | sed 's/[^0-9]*\([0-9]*\).*/\1/') toggle
+

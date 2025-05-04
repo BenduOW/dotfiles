@@ -21,27 +21,33 @@ separator_block_width=15
 #command=echo "Hello, $USER!"
 #interval=once
 
-[rss_news]
-command=$SCIRPT_DIR/rss_news
-label=<span color="#d65d0e"> </span>
-interval=once
-signal=6
+[pacman-updates]
+command=$SCRIPT_DIR/arch-update
+markup=pango
+interval= 3600
+#interval= 600
+QUIET=true
+WATCH=^linux.* ^pacman.*
+BASE_COLOR=#5fff5f
+UPDATE_COLOR=#FFFF85
+AUR=false
+LABEL= 
 
-[mediaplayer]
-command=$SCRIPT_DIR/mediaplayer
-instance=spotify
-interval=5
-signal=10
+#[mediaplayer]
+#command=$SCRIPT_DIR/mediaplayer
+#instance=spotify
+#interval=5
+#signal=10
 
-[cpugraph]
-interval=1
-command=$SCRIPT_DIR/cpugraph
-min_width=⣾⣄ 100.00%
+#[cpugraph]
+#interval=1
+#command=$SCRIPT_DIR/cpugraph
+#min_width=⣾⣄ 100.00%
 
-#[cpu]
-#command=$SCRIPT_DIR/cpu
-#label= 
-#interval=2
+[cpu]
+command=$SCRIPT_DIR/cpu
+label= 
+interval=2
 
 [memory]
 command=$SCRIPT_DIR/memory
@@ -61,6 +67,7 @@ command=$SCRIPT_DIR/volume-pipewire
 interval=persist
 SUBSCRIBE=1
 USE_ALSA_NAME=1
+LONG_FORMAT="${SYMB} ${VOL}%"
 
 [time]
 command=date '+%d-%m-%Y %H:%M:%S'

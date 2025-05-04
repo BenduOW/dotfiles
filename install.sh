@@ -20,12 +20,12 @@ detect_package_manager() {
     fi
 
     case $DISTRO in
-        ubuntu|debian)
-            installcom="sudo apt update && sudo apt install -y"
-            ;;
-        fedora|centos|rhel)
-            installcom="sudo dnf install -y"
-            ;;
+        #ubuntu|debian)
+        #   installcom="sudo apt update && sudo apt install -y"
+        #    ;;
+        #fedora|centos|rhel)
+        #    installcom="sudo dnf install -y"
+        #    ;;
         arch)
             installcom="sudo pacman -Sy --noconfirm"
             ;;

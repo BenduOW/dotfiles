@@ -1,9 +1,9 @@
 # source external files
 [[ -r ${ZDOTDIR:-$HOME}/.zaliases ]] && source ${ZDOTDIR:-$HOME}/.zaliases
 #[[ -r $HOME/.zprofile ]] && source $HOME/.zprofile
-[[ -r ${ZDOTDIR:-$HOME}/.zprofile ]] && source ${ZDOTDIR:-$HOME}/.zprofile
+#[[ -r ${ZDOTDIR:-$HOME}/.zprofile ]] && source ${ZDOTDIR:-$HOME}/.zprofile
 
-export HISTORY_IGNORE="(ls|ll|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
+export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
 # weird flex
 #if [ -f /usr/bin/fastfetch ]; then
@@ -13,6 +13,15 @@ export HISTORY_IGNORE="(ls|ll|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 if [ "$TERM_PROGRAM" != "vscode" ]; then
     fastfetch
 fi
+
+# Cowsay
+#if [ "$TERM_PROGRAM" != "vscode" ]; then
+#    paste <(fortune | cowsay -r) <(fastfetch -l none) | column -s $'\t' -t 
+#    #paste <(fortune | cowsay) <(oneofetch --off) | column -s $'\t' -t 
+#fi
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
 # auto/tab complete
 autoload -Uz compinit
@@ -29,8 +38,8 @@ source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
-HISTSIZE=1000
-SAVEHIST=1000
+#HISTSIZE=1000
+#SAVEHIST=1000
 HISTFILE=~/.config/zsh/.zsh_history
 
 function ex {
@@ -73,19 +82,20 @@ fi
 
 
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/bendu/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('$HOME/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/bendu/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/bendu/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/bendu/anaconda3/bin:$PATH"
+        export PATH="$HOME/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-eval "$(fzf --zsh)"
+#eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+source <(fzf --zsh)

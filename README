@@ -1,2 +1,2 @@
 Dotfiles for Arch Linux stored with stow
-Run ./yay.sh and then sudo ./install.sh
+Run ./yay.sh and then ./install.sh

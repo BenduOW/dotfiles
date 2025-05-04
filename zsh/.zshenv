@@ -3,8 +3,8 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export SUDO_EDITOR="nvim"
 export READER="zathura"
-export TERMINAL="kitty"
-export BROWSER="brave"
+export TERMINAL="alacritty"
+export BROWSER="firefox"
 export WM="i3"
 export IMAGE="mupdf"
 export LAUNCHER="rofi"
@@ -31,10 +31,12 @@ export MANPAGER="nvim +Man! -c 'set number'"
 #export MANPAGER="less"
 #export BAT_PAGER="nvim +Man! -c 'set number'"
 export BAT_PAGER="less"
-export FZF_DEFAULT_OPTS=" \
+export FZF_DEFAULT_OPTS="--style minimal --preview 'cat {}' \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+#fzf --style full \
+#    --preview 'cat {}' --bind 'focus:transform-header:file --brief {}'
 
 # set the localization
 export LC_ALL=en_US.UTF-8
