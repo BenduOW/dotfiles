@@ -11,7 +11,7 @@ xrandr --output DP-1 --primary --right-of DP-3
 xrdb -load ~/.config/X11/xresources &
 #xsetroot -cursor_name Bibata-Modern-Ice
 #picom &
-#slstatus &
+slstatus &
 #sxhkd &
 #udiskie &
 #flameshot &
