@@ -1,5 +1,4 @@
 /* See LICENSE file for copyright and license details. */
-
 /* interval between updates (in ms) */
 const unsigned int interval = 1000;
 
@@ -66,5 +65,8 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ datetime, "%s",           "%F %T" },
+	{ run_command, " %4s | ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
+	{ cpu_perc, "[CPU %s%%] ",   NULL },
+	{ ram_perc, "[RAM %s%%] ",   NULL },
+	{ datetime, "%s",           "%e %b %a %T" },
 };
