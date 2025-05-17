@@ -12,7 +12,7 @@ xrdb -load ~/.config/X11/xresources &
 #xsetroot -cursor_name Bibata-Modern-Ice
 #picom &
 slstatus &
-#sxhkd &
+sxhkd &
 #udiskie &
 #flameshot &
 #redshift &
