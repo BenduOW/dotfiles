@@ -6,18 +6,19 @@ xrandr --output DP-1 --primary --right-of DP-3
 
 #xsetroot -cursor_name Vimix-cursor
 
-#XDG_MENU_PREFIX=arch- kbuildsycoca6
+XDG_MENU_PREFIX=arch- kbuildsycoca6
 
 xrdb -load ~/.config/X11/xresources &
-#xsetroot -cursor_name Bibata-Modern-Ice
-#picom &
+xsetroot -cursor_name Bibata-Modern-Ice
+picom &
 #slstatus &
-#sxhkd &
-#udiskie &
-#flameshot &
-#redshift &
+sxhkd &
+udiskie &
+flameshot &
+redshift &
 #flatpak run com.discordapp.Discord &
 #spotify &
-#dunst &
+dunst &
 
-exec dwm > ~/.dwm.log
+#exec dwm > ~/.dwm.log
+exec i3
