@@ -3,7 +3,7 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export SUDO_EDITOR="nvim"
 export READER="zathura"
-export TERMINAL="alacritty"
+export TERMINAL="kitty"
 export BROWSER="firefox"
 export WM="i3"
 export IMAGE="mupdf"
@@ -35,11 +35,12 @@ export FZF_DEFAULT_OPTS="--style minimal --preview 'cat {}' \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+export FZF_DEFAULT_COMMAND="--path-to-ignore ~/.cache"
 #fzf --style full \
 #    --preview 'cat {}' --bind 'focus:transform-header:file --brief {}'
 
 # set the localization
-export LC_ALL=en_US.UTF-8
+#export LC_ALL=en_US.UTF-8
 
 # lf icons
 export LF_ICONS="\

@@ -1,23 +1,23 @@
-palette = "catppuccin_mocha"
+#palette = "catppuccin_mocha"
 
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Inserts a blank line between shell prompts
-add_newline = true
+add_newline = false 
 
-# Replace the '❯' symbol in the prompt with '➜'
-#[character] # The name of the module we are configuring is 'character'
-#success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-
-[username]
-show_always = true
+format = '''
+ (bold fg:green) $directory
+'''
+#[username]
+#show_always = true
 #style_user = "bg:#3B4252"
 #style_root = "bg:#3B4252"
-format = '[$user ]($style)'
+#format = '[ $user ]($style)'
 
 [directory]
 #style = "bg:#434C5E"
+style = "bg:#000000"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"

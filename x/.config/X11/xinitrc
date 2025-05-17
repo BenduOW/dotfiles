@@ -14,7 +14,6 @@ picom &
 #slstatus &
 sxhkd &
 udiskie &
-syncthing --no-browser &
 flameshot &
 redshift &
 #flatpak run com.discordapp.Discord &

@@ -10,7 +10,8 @@ alias lt='eza -aT --color=always --group-directories-first' # tree listing
 alias grep='grep --color=auto'
 alias cp="cp -i"
 alias mv="mv -i"
-alias rm="trash -v"
+#alias rm="trash -v"
+alias trash="trash -v"
 alias cat="bat"
 alias ocat="/bin/cat"
 alias tree="tree -CAhF --dirsfirst"
@@ -22,10 +23,11 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias cdc="cd $XDG_CONFIG_HOME"
 alias cdcz="cd $XDG_CONFIG_HOME/zsh"
+alias cdcn="cd $XDG_CONFIG_HOME/nvim"
 alias cdd="cd $HOME/dotfiles"
 
 # application aliases
-alias vim="$EDITOR"
+alias vim="nvim"
 alias nvim-test="XDG_CONFIG_HOME=~/projects/archinstall_build/nvim-build init.lua"
 alias oneofetch="/usr/bin/neofetch"
 alias neofetch="fastfetch"

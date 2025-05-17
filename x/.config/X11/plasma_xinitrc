@@ -16,7 +16,6 @@ xsetroot -cursor_name Bibata-Modern-Ice
 #slstatus &
 #sxhkd &
 #udiskie &
-#syncthing --no-browser &
 #flameshot &
 #redshift &
 #flatpak run com.discordapp.Discord &

@@ -25,7 +25,6 @@ separator_block_width=15
 command=$SCRIPT_DIR/arch-update
 markup=pango
 interval= 3600
-#interval= 600
 QUIET=true
 WATCH=^linux.* ^pacman.*
 BASE_COLOR=#5fff5f
@@ -54,13 +53,12 @@ command=$SCRIPT_DIR/memory
 label= 
 interval=10
 
-[bandwidth]
-command=$SCRIPT_DIR/bandwidth
-interval=1
-INLABEL= 
-OUTLABEL= 
-#LABEL=
-INTERFACE=enp3s0
+#[bandwidth]
+#command=$SCRIPT_DIR/bandwidth
+#interval=1
+#INLABEL= 
+#OUTLABEL= 
+#INTERFACE=enp3s0
 
 [volume-pipewire]
 command=$SCRIPT_DIR/volume-pipewire
@@ -70,7 +68,8 @@ USE_ALSA_NAME=1
 LONG_FORMAT="${SYMB} ${VOL}%"
 
 [time]
-command=date '+%d-%m-%Y %H:%M:%S'
+#command=date '+%d-%m-%Y %H:%M:%S'
+command=date '+%H:%M'
 interval=1
 
 [shutdown_menu]

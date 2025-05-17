@@ -1,7 +1,6 @@
 # source external files
 [[ -r ${ZDOTDIR:-$HOME}/.zaliases ]] && source ${ZDOTDIR:-$HOME}/.zaliases
-#[[ -r $HOME/.zprofile ]] && source $HOME/.zprofile
-#[[ -r ${ZDOTDIR:-$HOME}/.zprofile ]] && source ${ZDOTDIR:-$HOME}/.zprofile
+[[ -r ${ZDOTDIR:-$HOME}/.zprofile ]] && source ${ZDOTDIR:-$HOME}/.zprofile
 
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
@@ -10,9 +9,9 @@ export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 #  fastfetch
 #fi
 
-if [ "$TERM_PROGRAM" != "vscode" ]; then
-    fastfetch
-fi
+#if [ "$TERM_PROGRAM" != "vscode" ]; then
+#    fastfetch
+#fi
 
 # Cowsay
 #if [ "$TERM_PROGRAM" != "vscode" ]; then
@@ -97,5 +96,6 @@ unset __conda_setup
 
 #eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
+PROMPT_COMMAND="export PROMPT_COMMAND=echo"
 eval "$(starship init zsh)"
 source <(fzf --zsh)
