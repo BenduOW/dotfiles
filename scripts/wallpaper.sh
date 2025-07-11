@@ -19,7 +19,7 @@ for choice in $choices; do
 done
 
 while true; do 
-    WALLPAPER=$(find $FOLDERS -type f \( ! -name '*.zip' ! -name '*.txt' \) | shuf -n 1)
+    WALLPAPER=$(find $FOLDERS -type d -name .git -prune -o -type f \( ! -name '*.zip' ! -name '*.txt' \) -print | shuf -n 1)
     feh --bg-fill "$WALLPAPER" --bg-fill "$WALLPAPER"
     sleep 300
 done

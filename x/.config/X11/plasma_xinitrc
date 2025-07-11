@@ -15,7 +15,7 @@ xsetroot -cursor_name Bibata-Modern-Ice
 #picom &
 #slstatus &
 #sxhkd &
-#udiskie &
+udiskie &
 #flameshot &
 #redshift &
 #flatpak run com.discordapp.Discord &

@@ -32,6 +32,7 @@ alias nvim-test="XDG_CONFIG_HOME=~/projects/archinstall_build/nvim-build init.lu
 alias oneofetch="/usr/bin/neofetch"
 alias neofetch="fastfetch"
 alias za="zathura"
+alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 
 # change default user shell
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Log out and log back in for change to take effect.'"

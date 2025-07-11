@@ -6,9 +6,11 @@ export READER="zathura"
 export TERMINAL="kitty"
 export BROWSER="firefox"
 export WM="i3"
+export OPENER="xdg-open"
 export IMAGE="mupdf"
 export LAUNCHER="rofi"
 export DIFFPROG="nvim -d"
+export NNN_PLUG='v:imgview'
 
 # default folders
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -24,8 +26,8 @@ export _Z_DATA="$XDG_DATA_HOME"/z
 #export LESSHISTFILE=-
 
 # colors!
-export GTK_THEME=Adwaita:dark
-export QT_STYLE_OVERRIDE=Adwaita-Dark
+#export GTK_THEME=Adwaita:dark
+#export QT_STYLE_OVERRIDE=Adwaita-Dark
 export BAT_THEME="Catppuccin Mocha"
 export MANPAGER="nvim +Man! -c 'set number'"
 #export MANPAGER="less"
