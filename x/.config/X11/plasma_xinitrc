@@ -1,6 +1,7 @@
 #[ -z "$DISPLAY" ] && export DISPLAY=:0
 export DESKTOP_SESSION=plasma
-xrandr --output DP-1 --primary --right-of DP-3
+xrandr --output DP-0 --mode 2560x1440 --rate 240 --primary
+xrandr --output DP-3 --mode 1920x1080 --rate 60 --left-of DP-0
 
 #xmodmap -e "clear lock"
 #xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
@@ -18,7 +19,7 @@ xsetroot -cursor_name Bibata-Modern-Ice
 udiskie &
 #flameshot &
 #redshift &
-#flatpak run com.discordapp.Discord &
-#spotify &
+flatpak run com.discordapp.Discord &
+spotify &
 #dunst &
 exec startplasma-x11

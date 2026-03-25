@@ -2,8 +2,6 @@
 [[ -r ${ZDOTDIR:-$HOME}/.zaliases ]] && source ${ZDOTDIR:-$HOME}/.zaliases
 [[ -r ${ZDOTDIR:-$HOME}/.zprofile ]] && source ${ZDOTDIR:-$HOME}/.zprofile
 
-export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
-
 # weird flex
 #if [ -f /usr/bin/fastfetch ]; then
 #  fastfetch
@@ -37,8 +35,8 @@ source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
-#HISTSIZE=1000
-#SAVEHIST=1000
+HISTSIZE=1000
+SAVEHIST=1000
 HISTFILE=~/.config/zsh/.zsh_history
 
 function ex {

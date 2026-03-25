@@ -3,7 +3,9 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export SUDO_EDITOR="nvim"
 export READER="zathura"
+#export TERMINAL="st"
 export TERMINAL="kitty"
+#export TERMINAL="alacritty"
 export BROWSER="firefox"
 export WM="i3"
 export OPENER="xdg-open"
@@ -11,6 +13,7 @@ export IMAGE="mupdf"
 export LAUNCHER="rofi"
 export DIFFPROG="nvim -d"
 export NNN_PLUG='v:imgview'
+export COLORTERM="truecolor"
 
 # default folders
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -21,13 +24,13 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 export _Z_DATA="$XDG_DATA_HOME"/z
-#export HISTFILE=$HOME/.config/zsh/.zsh_history
+export HISTFILE="$XDG_DATA_HOME"/zsh/history
 #export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 #export LESSHISTFILE=-
 
 # colors!
-#export GTK_THEME=Adwaita:dark
-#export QT_STYLE_OVERRIDE=Adwaita-Dark
+export GTK_THEME=Adwaita:dark
+export QT_STYLE_OVERRIDE=Adwaita-Dark
 export BAT_THEME="Catppuccin Mocha"
 export MANPAGER="nvim +Man! -c 'set number'"
 #export MANPAGER="less"

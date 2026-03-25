@@ -48,7 +48,7 @@ exec --no-startup-id nm-applet
 # Wallpaper script
 #exec --no-startup-id $HOME/dotfiles/scripts/wallpaper.sh
 #exec $TERMINAL -e $HOME/dotfiles/scripts/wallpaper.sh
-exec $TERMINAL --title="wallpaper" -e $HOME/dotfiles/scripts/wallpaper.sh
+exec kitty --title="wallpaper" -e $HOME/dotfiles/scripts/wallpaper.sh
 assign [title="wallpaper"] $ws9 
 
 # Start spotify and Discord on correct workspace
@@ -59,6 +59,10 @@ exec --no-startup-id $HOME/dotfiles/scripts/mouseSens.sh
 
 # CAPS as ctrl
 exec --no-startup-id $HOME/dotfiles/scripts/keyboard.sh
+
+# toggle between keyboard layouts
+exec "setxkbmap -layout us,de"
+exec "setxkbmap -option 'grp:alt_shift_toggle'"
 
 # Use pactl to adjust volume in PulseAudio.
 #set $refresh_i3status killall -SIGUSR1 i3status
@@ -185,7 +189,10 @@ assign [class="Spotify"] $ws1
 #assign [class="Brave-Browser"] $ws3
 assign [class="KeePassXC"] $ws9
 for_window [urgent="latest" class="KeePassXC"] focus
+#for_window [title="Friends List"] floating enable
 for_window [class="pavucontrol"] floating enable
+for_window[class="steam"] floating enable
+for_window[class="steam" title="^Steam$"] floating disable
 for_window [class="Tor Browser"] floating enable
 focus_on_window_activation focus
 no_focus [class="discord"] 

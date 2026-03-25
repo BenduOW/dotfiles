@@ -1,0 +1,42 @@
+# zathurarc-dark
+set notification-error-bg       "#333333"
+set notification-error-fg       "#c33c33"
+set notification-warning-bg     "#333333"
+set notification-warning-fg     "#c33c33"
+set notification-bg             "#333333"
+set notification-fg             "#ecc48d"
+
+set completion-group-bg         "#010C14"
+set completion-group-fg         "#cbcbcb"
+set completion-bg               "#1e2425"
+set completion-fg               "#cecece"
+set completion-highlight-bg     "#ffffff"
+set completion-highlight-fg     "#333333"
+
+# Define the color in index mode
+set index-bg                    "#0e1415"
+set index-fg                    "#cecece"
+set index-active-bg             "#333333"
+set index-active-fg             "#ffffff"
+
+set inputbar-bg                 "#333333"
+set inputbar-fg                 "#ffffff"
+
+set statusbar-bg                "#0e1415"
+set statusbar-fg                "#cecece"
+
+set highlight-color             "#293334"
+set highlight-active-color      "#cbcbcb"
+
+set default-bg                  "#0e1415"
+set default-fg                  "#cecece"
+set render-loading              true
+set render-loading-fg           "#0e1415"
+set render-loading-bg           "#0e1415"
+
+# Recolor book content's color
+set recolor                     true
+set recolor-lightcolor          "#0e1415"
+set recolor-darkcolor           "#cecece"
+set recolor-keephue             true
+

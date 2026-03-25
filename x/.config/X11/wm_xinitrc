@@ -1,24 +1,24 @@
 xrandr --output DP-0 --mode 2560x1440 --rate 240 --primary
 xrandr --output DP-3 --mode 1920x1080 --rate 60 --left-of DP-0
-
 #xmodmap -e "clear lock"
 #xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
 #xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 
 #xsetroot -cursor_name Vimix-cursor
 
-#XDG_MENU_PREFIX=arch- kbuildsycoca6
+XDG_MENU_PREFIX=arch- kbuildsycoca6
 
 xrdb -load ~/.config/X11/xresources &
 #xsetroot -cursor_name Bibata-Modern-Ice
-picom &
-slstatus &
+#picom &
+#slstatus &
 sxhkd &
 udiskie &
-#flameshot &
-redshift &
+flameshot &
+#redshift &
 #flatpak run com.discordapp.Discord &
 #spotify &
 dunst &
 
-exec dwm > ~/.dwm.log
+#exec dwm > ~/.dwm.log
+exec wmaker
