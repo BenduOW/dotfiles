@@ -1,11 +1,10 @@
-vim.opt.termguicolors = true
 require("custom.lazy")
 
 vim.opt.shiftwidth = 4
 vim.opt.clipboard = "unnamedplus"
 vim.opt.number = true
 vim.opt.relativenumber = true
---vim.opt.termguicolors = true
+vim.opt.termguicolors = true
 
 vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
 vim.keymap.set("n", "<space>x", ":.lua<CR>")

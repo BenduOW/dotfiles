@@ -1,0 +1,41 @@
+{
+  "plugins": {
+    "alabaster.nvim": {
+      "rev": "ae0c5f41c70b576f0678319e57fe47b2b288d2fc",
+      "src": "https://github.com/dchinmay2/alabaster.nvim"
+    },
+    "harpoon": {
+      "rev": "1bc17e3e42ea3c46b33c0bbad6a880792692a1b3",
+      "src": "https://github.com/theprimeagen/harpoon"
+    },
+    "mason-lspconfig.nvim": {
+      "rev": "25f609e7fca78af7cede4f9fa3af8a94b1c4950b",
+      "src": "https://github.com/mason-org/mason-lspconfig.nvim"
+    },
+    "mason.nvim": {
+      "rev": "44d1e90e1f66e077268191e3ee9d2ac97cc18e65",
+      "src": "https://github.com/mason-org/mason.nvim"
+    },
+    "nvim-lspconfig": {
+      "rev": "11afebab7ae8953c1db8f4c223e7742132d035f3",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "nvim-treesitter": {
+      "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'main'"
+    },
+    "plenary.nvim": {
+      "rev": "b9fd5226c2f76c951fc8ed5923d85e4de065e509",
+      "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "telescope.nvim": {
+      "rev": "cfb85dcf7f822b79224e9e6aef9e8c794211b20b",
+      "src": "https://github.com/nvim-telescope/telescope.nvim"
+    },
+    "undotree": {
+      "rev": "6fa6b57cda8459e1e4b2ca34df702f55242f4e4d",
+      "src": "https://github.com/mbbill/undotree"
+    }
+  }
+}
