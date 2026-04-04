@@ -1,7 +1,7 @@
-vim.pack.add{
-    { src = 'https://github.com/nvim-lua/plenary.nvim' },
-    { src = 'https://github.com/theprimeagen/harpoon' }, 
-}
+--vim.pack.add{
+--    { src = 'https://github.com/nvim-lua/plenary.nvim' },
+--    { src = 'https://github.com/theprimeagen/harpoon' }, 
+--}
 
 local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
