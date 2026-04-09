@@ -29,9 +29,12 @@ return {
       ensure_installed = {
         "cssls",
         "lua_ls",
---        "pyright",
-	"pylsp",
+        --        "pyright",
+        "pylsp",
         "clangd",
+        "jdtls",
+        "qmlls",
+        "texlab",
       },
     })
 

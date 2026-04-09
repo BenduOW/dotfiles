@@ -4,6 +4,10 @@
 --  { src = 'https://github.com/mason-org/mason-lspconfig.nvim' },
 --}
 
+vim.cmd.packadd("nvim-lint")
+
+-- LSP
+
 require("mason").setup({})
 require("mason-lspconfig").setup({
     ensure_installed = {
@@ -43,5 +47,37 @@ vim.lsp.config('lua_ls', {
         },
     },
 })
+vim.lsp.config("pyright", {})
 
--- TODO: nvim-lint conform.nvim
+-- Linting
+
+--require('mason-tool-installer').setup({
+--	ensure_installed = {
+--		'luacheck',
+--	},
+--	auto_update = false,
+--	run_on_start = true,
+--	start_delay = 3000,
+--	integrations = {
+--		['mason-lspconfig'] = true,
+--		['mason-null-ls'] = false,
+--		['mason-nvim-dap'] = false,
+--	},
+--
+--})
+--
+--local lint = require("lint")
+--
+--lint.linters_by_ft = {
+--	lua = { "luacheck" },
+--}
+--
+--vim.api.nvim_create_autocmd({ "BufReadPost", "BufWritePost", "InsertLeave" }, {
+--    callback = function()
+--        lint.try_lint()
+--    end,
+--})
+
+
+
+-- Formatting

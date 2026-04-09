@@ -1,4 +1,7 @@
-vim.opt.tabstop = 4 -- tabwidth vim.opt.shiftwidth = 4 -- indent width vim.opt.softtabstop = 4 -- soft tab stop not tabs on tab/backspace vim.opt.expandtab = true -- use spaces instead of tabs
+vim.opt.tabstop = 4 -- tabwidth 
+vim.opt.shiftwidth = 4 -- indent width 
+vim.opt.softtabstop = 4 -- soft tab stop not tabs on tab/backspace 
+vim.opt.expandtab = true -- use spaces instead of tabs
 vim.opt.smartindent = true -- smart auto-indent
 vim.opt.autoindent = true -- copy indent from current line
 vim.opt.swapfile = false
@@ -67,6 +70,11 @@ vim.pack.add({
     { src = 'https://github.com/mason-org/mason.nvim' },
     { src = 'https://github.com/neovim/nvim-lspconfig' },
     { src = 'https://github.com/mason-org/mason-lspconfig.nvim' },
+		-- linting
+		{ src = 'https://github.com/mfussenegger/nvim-lint' },
+		{ src = 'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim' },
+		-- formatting
+		{ src = 'https://github.com/stevearc/conform.nvim' },
     -- completion
     {
       src = 'https://github.com/saghen/blink.cmp',

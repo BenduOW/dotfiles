@@ -15,10 +15,11 @@ return {
     lazy = false,
     config = function()
       local capabilities = require("blink.cmp").get_lsp_capabilities()
-      --require("lspconfig").lua_ls.setup({ capabilities = capabilities })
+
       vim.lsp.config("lua_ls", {
-	capabilities = capabilities
+        capabilities = capabilities,
       })
+
       vim.lsp.config("pylsp", {
         capabilities = capabilities,
         settings = {
@@ -26,26 +27,34 @@ return {
             plugins = {
               flake8 = { enabled = true },
               pycodestyle = {
-		enabled = false,
-		max_line_length = 79,
-	      },
+                enabled = false,
+                max_line_length = 79,
+              },
               pyflakes = { enbaled = false },
               pylint = { enabled = false },
               mccabe = { enabled = false },
-	      autopep8 = {
-		enabled = true,
-	      },
+              autopep8 = { enabled = true },
             },
           },
         },
       })
+
       vim.lsp.config("qmlls", {
-	cmd = {"qmlls", "-E"}
+        --cmd = { "qmlls", "-E" },
       })
 
       vim.lsp.config("clangd", {
-	capabilities = capabilities
+        capabilities = capabilities,
       })
+
+      vim.lsp.config("jdtls", {
+        settings = {
+          java = {},
+        },
+      })
+
+      vim.lsp.config("texlab", {})
+
       on_attach = function(client, bufnr)
         client.server_capabilities.signatureHelpProvider = false
         on_attach(client, bufnr)

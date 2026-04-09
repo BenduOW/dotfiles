@@ -1,19 +1,19 @@
 {
     "position": "top",
     "modules-left": [
-        "hyprland/workspaces",
+        "hyprland/workspaces"
     ],
     "modules-center": [
     "hyprland/window"
     ],
     "modules-right": [
-        "custom/media",
+//        "custom/media",
         "network",
         "cpu",
         "memory",
         "pulseaudio",
         "battery",
-        "clock",
+        "clock"
     ],
     // Module configuration
     "hyprland/window": {
@@ -35,7 +35,7 @@
 //            "class<discord>": " ",
 //            "class<dolphin>": " ",
 //            "class<spotify>": " ",
-            },
+            }
     },
     "clock": {
       "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
