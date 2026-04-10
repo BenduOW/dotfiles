@@ -1,4 +1,5 @@
 scripts/install.log
 newsboat/.config/newsboat/urls
 zsh/.config/zsh/.zsh_history
+zsh/.config/zsh/.zcompdump
 .mypy_cache/
