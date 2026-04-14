@@ -1,15 +1,21 @@
 import Quickshell
+import Quickshell.Wayland
 import QtQuick
+//import QtQuick.Wayland
+//import Niri 0.1
 
-FloatingWindow {
-    visible: true
-    width: 200
-    height: 100
+PanelWindow {
+    anchors.top: true
+    anchors.left: true
+    anchors.right: true
+    implicitHeight: 30
+    color: "#1a1b26"
 
     Text {
         anchors.centerIn: parent
-        text: "Hello"
-        color: "#0db9d7"
-        font.pixelSize: 18
+        text: "Test"
+        color: "#a9b1d6"
+        font.pixelSize: 14
     }
+
 }
