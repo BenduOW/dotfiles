@@ -13,6 +13,8 @@ input {
         repeat-rate 35
         repeat-delay 200
         xkb {
+            layout "us,de"
+            options "grp:win_space_toggle,caps:escape"
             // You can set rules, model, layout, variant and options.
             // For more information, see xkeyboard-config(7).
 
@@ -39,7 +41,7 @@ input {
         // dwtp
         // drag false
         // drag-lock
-        //natural-scroll
+        // natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
         // scroll-method "two-finger"
@@ -71,6 +73,14 @@ input {
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
      focus-follows-mouse max-scroll-amount="0%"
+}
+
+gestures {
+    hot-corners {
+        //top-left
+        off
+    }
+
 }
 
 // You can configure outputs by their name, which you can find
@@ -624,7 +634,8 @@ binds {
 
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    //Alt+Print { screenshot-window; }
+    Mod+S { screenshot-window; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
