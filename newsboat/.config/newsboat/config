@@ -1,4 +1,4 @@
-include ~/.config/newsboat/dark
+#include ~/.config/newsboat/dark
 #include ~/.config/newsboat/latte
 prepopulate-query-feeds yes
 #refresh-on-startup yes
@@ -27,11 +27,11 @@ bind-key U show-urls
 bind-key x pb-delete
 
 browser linkhandler
-macro , open-in-browser
-macro t set browser "tsp youtube-dl --add-metadata -ic" ; open-in-browser ; set browser linkhandler
-macro a set browser "tsp youtube-dl --add-metadata -xic -f bestaudio/best" ; open-in-browser ; set browser linkhandler
-macro v set browser "setsid -f mpv" ; open-in-browser ; set browser linkhandler
-macro w set browser "w3m" ; open-in-browser ; set browser linkhandler
-macro p set browser "dmenuhandler" ; open-in-browser ; set browser linkhandler
-macro c set browser "xsel -b <<<" ; open-in-browser ; set browser linkhandler
-macro r set browser "ttrv" ; open-in-browser
+#macro , open-in-browser
+#macro t set browser "tsp youtube-dl --add-metadata -ic" ; open-in-browser ; set browser linkhandler
+#macro a set browser "tsp youtube-dl --add-metadata -xic -f bestaudio/best" ; open-in-browser ; set browser linkhandler
+#macro v set browser "setsid -f mpv" ; open-in-browser ; set browser linkhandler
+#macro w set browser "w3m" ; open-in-browser ; set browser linkhandler
+#macro p set browser "dmenuhandler" ; open-in-browser ; set browser linkhandler
+#macro c set browser "xsel -b <<<" ; open-in-browser ; set browser linkhandler
+#macro r set browser "ttrv" ; open-in-browser

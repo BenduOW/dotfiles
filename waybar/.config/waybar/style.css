@@ -1,7 +1,8 @@
 @import "mocha.css"; 
 
 * {
-    font-family: "MesloLGS Nerd Font Mono Bold";
+    /*font-family: "MesloLGS Nerd Font Mono Bold";*/
+    font-family: "Iosevka";
     font-size: 16px;
     min-height: 0;
     font-weight: bold;
@@ -64,7 +65,9 @@ button:hover {
 #backlight,
 #wireplumber,
 #custom-media,
-#tray,
+#tray {
+    padding-right: 10px
+}
 #network,
 #mode,
 #scratchpad {

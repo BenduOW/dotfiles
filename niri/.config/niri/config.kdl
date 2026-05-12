@@ -302,6 +302,7 @@ layout {
 spawn-at-startup "waybar"
 spawn-at-startup "/usr/bin/xwayland-satellite"
 spawn-sh-at-startup "swaybg -i ~/dotfiles/wallpapers/yosemite.jpg -m fill"
+//spawn-sh-at-startup "swaybg -i ~/Pictures/wallhaven/wallhaven-w5m1y7 -m fill"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -357,6 +358,13 @@ window-rule {
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+window-rule {
+    // This app-id regular expression will work for both:
+    // - host brave (app-id is "brave")
+    match app-id=r#"brave$"# title="^Picture-in-Picture$"
     open-floating true
 }
 

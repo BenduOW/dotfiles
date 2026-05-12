@@ -13,7 +13,8 @@
         "memory",
         "pulseaudio",
         "battery",
-        "clock"
+        "clock",
+        "tray"
     ],
     // Module configuration
     "hyprland/window": {
