@@ -14,7 +14,7 @@ input {
         repeat-delay 200
         xkb {
             layout "us,de"
-            options "grp:win_space_toggle,caps:escape"
+            options "grp:win_space_toggle, caps:escape_shifted_capslock"
             // You can set rules, model, layout, variant and options.
             // For more information, see xkeyboard-config(7).
 
@@ -91,7 +91,7 @@ gestures {
 // Remember to uncomment the node by removing "/-"!
 
 output "eDP-1" {
-    mode "1920x1080@60.020"
+    mode "1920x1080@60.000"
 }
 output "DP-1" {
     mode "2560x1440@240.001"
@@ -100,6 +100,10 @@ output "DP-1" {
 output "DP-2" {
     mode "1920x1080@60.000"
     position x=0 y=0
+}
+output "HDMI-A-2" {
+    mode "1920x1080@60.000"
+    position x=1080 y=0
 }
 
 
@@ -404,7 +408,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
-    Mod+D hotkey-overlay-title="Run an Application: wofi" { spawn-sh "wofi --show drun"; }
+    Mod+D hotkey-overlay-title="Run an Application: wofi" { spawn-sh "wofi -I --show drun"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.

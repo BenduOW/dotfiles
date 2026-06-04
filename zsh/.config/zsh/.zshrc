@@ -84,6 +84,14 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# set an ad-hoc GUI timer
+function timer() {
+  local N=$1; shift
+
+  (sleep $N && zenity --info --title="Time's Up" --text="${*:-BING}") &
+  echo "timer set for $N"
+}
+
 
 
 # !! Contents within this block are managed by 'conda init' !!
