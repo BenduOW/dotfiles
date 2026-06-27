@@ -4,7 +4,8 @@ if [[ -z "$DISPLAY" && "$(tty)" = "/dev/tty1" && -z "$HYPRLAND_LOADED" && -z "$N
     case "$HOST" in
         archlinux)
             export HYPRLAND_LOADED=1
-            exec start-hyprland
+            #exec start-hyprland
+            exec uwsm start hyprland.desktop
             ;;
         archpad)
             export NIRI_LOADED=1

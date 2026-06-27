@@ -3,6 +3,8 @@ include alabaster_dark
 
 set selection-clipboard clipboard
 
+set statusbar-home-tilde true
+
 set zoom-step 20
 set scroll-step 80
 

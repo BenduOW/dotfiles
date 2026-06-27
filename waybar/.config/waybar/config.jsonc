@@ -22,7 +22,8 @@
         "seperate-outputs": true
     },
     "hyprland/workspaces": {
-        "format": "{icon}    {windows}",
+//        "format": "{icon}    {windows}",
+        "format": "{icon}  {windows}",
         "sort-by": "id",
         //"window-rewrite-default": "?",
         "window-rewrite-default": "",
