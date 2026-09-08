@@ -92,6 +92,15 @@ function timer() {
   echo "timer set for $N"
 }
 
+# unset zle_bracketed_paste
+
+#if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+#    ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
+#fi
+#if [ ! -f "$SSH_AUTH_SOCK" ]; then
+#    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+#fi
+
 
 
 # !! Contents within this block are managed by 'conda init' !!

@@ -9,7 +9,7 @@ if [[ -z "$DISPLAY" && "$(tty)" = "/dev/tty1" && -z "$HYPRLAND_LOADED" && -z "$N
             ;;
         archpad)
             export NIRI_LOADED=1
-            exec niri-session
+            exec uwsm start niri-session
             ;;
     esac
 fi
