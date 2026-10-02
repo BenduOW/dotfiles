@@ -1,4 +1,5 @@
 local set = vim.opt_local
 
-set.colorcolumn = 80
+set.colorcolumn = '80'
+--vim.opt.colorcolumn = '80'
 vim.o.textwidth = 72

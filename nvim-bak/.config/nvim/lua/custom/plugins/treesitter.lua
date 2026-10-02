@@ -1,11 +1,14 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    enabled = false,
     lazy = false,
     build = ":TSUpdate",
     config = function()
-      require("nvim-treesitter.configs").setup({
-        ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "java" },
+      require("nvim-treesitter").setup({
+        install_dir = vim.fn.stdpath('data') .. '/site',
+        -- ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "java" },
+        require('nvim-treesitter').install() { 'c' },
 
         auto_install = false,
         highlight = {
